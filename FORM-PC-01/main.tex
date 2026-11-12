@@ -1,0 +1,143 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[landscape,margin=1.25cm]{geometry}
+\usepackage{array,tabularx,longtable,booktabs}
+\usepackage[table]{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=teal!60!black,urlcolor=blue!60!black,citecolor=teal!60!black}
+\definecolor{verde}{HTML}{174A6E}
+\definecolor{azul}{HTML}{174A6E}
+\definecolor{palido}{HTML}{EAF2F7}
+\renewcommand{\arraystretch}{1.12}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\tabcolsep}{4pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{UTEQ · Ingeniería de Requisitos (ISR-401)}
+\fancyhead[R]{GA-PRAC-01 · Avance grupal}
+\fancyfoot[L]{Alvarez · Briones · Rivera}
+\fancyfoot[R]{Página \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\newcommand{\titulo}[1]{\section*{\textcolor{verde}{#1}}}
+\newcommand{\subtitulo}[1]{\subsection*{\textcolor{azul}{#1}}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries\textcolor{verde}{Comparación de modelos de proceso de requisitos}}\\[3pt]
+{\large PC1 · GA-PRAC-01 · Avance de los escenarios 1 y 2}
+\end{center}
+\vspace{3pt}
+\textbf{Integrantes:} Alvarez Rubio Rai Eduardo; Briones Solorzano William Adrian; Rivera Rodriguez Joseph Jeremy\\
+\textbf{Asignatura:} ISR-401 · Ingeniería de Requisitos · UTEQ\\
+\textbf{Alcance:} En este avance trabajamos los criterios de comparación y los dos primeros escenarios de la guía. Dejamos completas sus matrices y recomendaciones para que el grupo pueda continuar con los escenarios 3 y 4 y el apartado de actores y framework. Los datos de los casos se toman del material de clase [1].
+
+\titulo{1. Criterios de comparación}
+Para comparar los modelos usamos seis criterios comunes en ambos casos. La escala indica el ajuste del modelo a las condiciones descritas: \textbf{Alta} significa buen encaje; \textbf{Media}, que puede funcionar si añadimos controles; y \textbf{Baja}, que sus supuestos habituales chocan con algún dato importante. En cada valoración explicamos el motivo.
+
+\small
+\begin{tabularx}{\linewidth}{@{}p{3.4cm}Y@{}}
+\rowcolor{verde}\color{white}\textbf{Criterio}&\color{white}\textbf{Qué observamos en el escenario}\\\midrule
+K1. Estabilidad y cambios&Qué necesidades están claras y cuáles pueden variar durante el trabajo.\\
+K2. Partes interesadas y disponibilidad&Cuándo pueden participar quienes conocen, usan o aprueban el sistema.\\
+K3. Tipo de sistema y criticidad&Qué se construye y qué consecuencias tendría una falla.\\
+K4. Riesgo principal&Qué incertidumbre puede causar retrabajo, daño o incumplimiento.\\
+K5. Documentación y marco normativo o contractual&Qué evidencias, aprobaciones y obligaciones hay que conservar.\\
+K6. Equipo, plazo y presupuesto&Disponibilidad del equipo, fecha límite y límites de costo.\\
+\end{tabularx}
+
+\titulo{2. Modelos considerados}
+\small
+\begin{tabularx}{\linewidth}{@{}p{2.7cm}Y Y@{}}
+\rowcolor{verde}\color{white}\textbf{Modelo}&\color{white}\textbf{Cómo organiza el trabajo}&\color{white}\textbf{Cuándo suele encajar}\\\midrule
+Secuencial o cascada&Ordena requisitos, diseño, construcción, pruebas y entrega en etapas con revisiones. Los resultados de cada etapa sirven de base a la siguiente.&Cuando las necesidades se conocen temprano y hacen falta hitos y documentación formal. Royce también muestra retroalimentación entre etapas; no lo interpreto como una ausencia absoluta de iteración [2].\\
+Iterativo e incremental&Construye el sistema en ciclos y entrega partes verificables. Lo aprendido en una entrega orienta la siguiente, y se pueden priorizar incertidumbres [3].&Cuando conviene probar pronto una función o interfaz sin perder planificación, pruebas y documentación.\\
+Ágil&Trabaja con entregas pequeñas, prioridades revisables y colaboración frecuente con quien representa a los usuarios. Scrum es un ejemplo, no el único enfoque ágil [4], [5].&Cuando cambian las necesidades y una persona responsable puede revisar y priorizar con frecuencia. La agilidad no elimina la documentación ni las obligaciones legales [4], [6].\\
+\end{tabularx}
+\normalsize
+La ingeniería de requisitos acompaña el ciclo de vida: identifica y analiza necesidades, las acuerda, documenta, valida y gestiona sus cambios [6]. Por eso no comparamos solo rapidez; también consideramos participación, criticidad y evidencia.
+
+\titulo{3. Escenario 1 · Control embebido para una extractora de palma}
+Extractora Río Lindo procesa cerca de 180 toneladas diarias en temporada alta. El controlador regulará esterilizadores y niveles de tanques. Hubo dos desbordes y una quemadura leve. Las reglas de seguridad son estables, pero el proveedor de sensores y válvulas se define en el mes 3 y falta aclarar la interfaz de operación. La aseguradora exige requisitos de seguridad aprobados y pruebas documentadas [1].
+
+\scriptsize
+\begin{longtable}{@{}p{3.15cm}p{7.15cm}p{7.15cm}p{7.15cm}@{}}
+\rowcolor{verde}\color{white}\textbf{Criterio}&\color{white}\textbf{Secuencial (cascada)}&\color{white}\textbf{Iterativo e incremental}&\color{white}\textbf{Ágil}\\\endfirsthead
+\rowcolor{verde}\color{white}\textbf{Criterio}&\color{white}\textbf{Secuencial (cascada)}&\color{white}\textbf{Iterativo e incremental}&\color{white}\textbf{Ágil}\\\endhead
+K1. Estabilidad y cambios&\textbf{MEDIA.} Las reglas de seguridad son estables, aunque el proveedor e interfaz aún no están definidos.&\textbf{ALTA.} Permite probar las protecciones y revisar la integración al conocer al proveedor.&\textbf{MEDIA.} Acepta cambios, pero las interfaces embebidas y protecciones requieren control formal.\\\hline
+K2. Partes interesadas&\textbf{MEDIA.} El jefe tiene dos mañanas por semana y los operadores trabajan en tres turnos; habría que agendar aprobaciones.&\textbf{ALTA.} Se pueden programar revisiones por ciclo sin exigir presencia diaria.&\textbf{BAJA.} La disponibilidad limitada no favorece la colaboración frecuente que suele aprovechar el equipo ágil.\\\hline
+K3. Sistema y criticidad&\textbf{ALTA.} Es un control embebido de presión, temperatura y nivel con consecuencias físicas ante fallas.&\textbf{ALTA.} Las protecciones se pueden construir y verificar por partes antes de ampliar el sistema.&\textbf{MEDIA.} Puede priorizar seguridad, con trazabilidad, pruebas y aprobaciones formales desde el inicio.\\\hline
+K4. Riesgo principal&\textbf{BAJA.} Una integración tardía podría descubrir incompatibilidades del proveedor cuando quede poco margen.&\textbf{ALTA.} Prototipos de interfaz y pruebas tempranas reducen la incertidumbre del proveedor.&\textbf{MEDIA.} Los ciclos ayudan, aunque no resuelven por sí solos compatibilidad física ni validación de interbloqueos.\\\hline
+K5. Evidencia y reglas&\textbf{ALTA.} Sus etapas facilitan mantener requisitos aprobados y evidencias de prueba para cada protección.&\textbf{ALTA.} Puede conservar trazabilidad, revisión y aprobación dentro de cada incremento.&\textbf{MEDIA.} Es viable si se planifica explícitamente la documentación que exige la aseguradora.\\\hline
+K6. Equipo, plazo y recursos&\textbf{MEDIA.} Hay diez meses y cinco perfiles especializados, pero poca holgura si la integración se retrasa.&\textbf{ALTA.} El equipo puede repartir incrementos y reservar hitos antes de la temporada alta.&\textbf{MEDIA.} Los ciclos son posibles, pero la integración de hardware y seguridad exige coordinación adicional.\\
+\end{longtable}
+\normalsize
+\textbf{Recomendación inicial:} Iterativo e incremental con hitos formales de seguridad y una línea base documentada.
+
+\titulo{4. Recomendación y riesgos del escenario 1}
+Elegimos un enfoque iterativo e incremental con revisiones formales. Por la criticidad no conviene esperar al final para comprobar el sistema completo: queremos verificar protecciones e integración por partes, y conservar la evidencia aprobada en cada avance.
+\begin{enumerate}[leftmargin=*,itemsep=1pt]
+\item \textbf{Riesgo de integración:} sensores y válvulas se seleccionan en el mes 3. Un prototipo de interfaz y pruebas tempranas ayudan a detectar incompatibilidades antes de la integración completa.
+\item \textbf{Seguridad verificable:} los desbordes y la quemadura justifican priorizar alarmas e interbloqueos, probar cada protección y guardar la aprobación requerida por la aseguradora.
+\item \textbf{Participación programable:} el jefe tiene dos mañanas disponibles y los operadores trabajan en turnos. Las revisiones acordadas por ciclo permiten validar sin exigir disponibilidad diaria.
+\end{enumerate}
+La cascada aporta orden, pero deja expuesto el calendario a la interfaz que aún no se conoce. Un enfoque ágil puro depende más de intercambios frecuentes, difíciles de sostener con la disponibilidad indicada. La tensión es que la seguridad está definida, mientras la integración no; por eso conservamos hitos y trazabilidad dentro del trabajo iterativo [2], [3], [6].
+
+\begin{tabularx}{\linewidth}{@{}p{6cm}Y@{}}
+\rowcolor{verde}\color{white}\textbf{Riesgo}&\color{white}\textbf{Mitigación que proponemos}\\\midrule
+La selección tardía de sensores reduce el tiempo para resolver incompatibilidades.&Definir una interfaz provisional; probar con emuladores y, al escoger proveedor, reservar una revisión de integración.\\
+Una protección puede no considerar todos los turnos o quedar sin aprobación.&Consultar a operadores de los tres turnos y relacionar cada regla con su prueba, resultado y aprobación antes de la puesta en marcha.\\
+\end{tabularx}
+
+\titulo{5. Escenario 2 · Pedidos móviles para Sabores de la Abuela Rosa}
+El emprendimiento recibe unos 70 pedidos al día por mensajería. La dueña pierde mensajes y se confunden direcciones; está disponible a diario para probar, pero cambia prioridades. Hay 14 semanas, presupuesto pequeño y dos desarrolladores a medio tiempo. La aplicación debe considerar teléfonos Android de gama baja, conexión intermitente, datos personales y conciliación de transferencias [1], [7].
+
+\scriptsize
+\begin{longtable}{@{}p{3.15cm}p{7.15cm}p{7.15cm}p{7.15cm}@{}}
+\rowcolor{verde}\color{white}\textbf{Criterio}&\color{white}\textbf{Secuencial (cascada)}&\color{white}\textbf{Iterativo e incremental}&\color{white}\textbf{Ágil}\\\endfirsthead
+\rowcolor{verde}\color{white}\textbf{Criterio}&\color{white}\textbf{Secuencial (cascada)}&\color{white}\textbf{Iterativo e incremental}&\color{white}\textbf{Ágil}\\\endhead
+K1. Estabilidad y cambios&\textbf{BAJA.} El menú cambia casi a diario y las ideas de puntos y promociones fluctúan.&\textbf{ALTA.} Cada incremento puede incorporar cambios de menú y ajustar prioridades.&\textbf{ALTA.} El backlog revisable permite ordenar las ideas de la dueña según su valor.\\\hline
+K2. Partes interesadas&\textbf{BAJA.} La dueña está disponible para probar cada versión; esperar a una revisión por fase desaprovecha esa opción.&\textbf{ALTA.} Sus pruebas frecuentes aportan comentarios entre incrementos.&\textbf{ALTA.} La dueña puede revisar a diario y su hijo aporta ideas para priorizar.\\\hline
+K3. Sistema y criticidad&\textbf{MEDIA.} Es una aplicación de pedidos, pero trata datos personales y pagos con conexión inestable.&\textbf{ALTA.} El flujo de pedido y pago se valida por incrementos en teléfonos de gama baja.&\textbf{ALTA.} Un MVP permite probar el flujo principal; privacidad y conciliación siguen como criterios obligatorios.\\\hline
+K4. Riesgo principal&\textbf{BAJA.} Mensajes perdidos, direcciones erróneas o pagos sin conciliar podrían detectarse tarde.&\textbf{ALTA.} Entregas sucesivas ayudan a probar pedidos y transferencias bajo cortes de datos.&\textbf{ALTA.} Las pruebas frecuentes ayudan, pero hay que evitar pedidos duplicados al reconectar.\\\hline
+K5. Evidencia y reglas&\textbf{ALTA.} Documentación inicial y alcance acordado ayudan a controlar el precio fijo.&\textbf{MEDIA.} Requiere definir terminado y mantener evidencia de privacidad y pago en cada incremento.&\textbf{MEDIA.} Se adapta a cambios si registra decisiones, aceptación y tratamiento de datos conforme a la ley [7].\\\hline
+K6. Equipo, plazo y recursos&\textbf{MEDIA.} El plazo de 14 semanas y presupuesto pequeño favorecen planificar, pero el alcance cerrado es frágil ante cambios.&\textbf{ALTA.} Dos personas a medio tiempo pueden entregar primero el núcleo y dejar mejoras para después.&\textbf{ALTA.} Un MVP y prioridades claras protegen el plazo y hacen visible lo que cabe en el presupuesto.\\
+\end{longtable}
+\normalsize
+\textbf{Recomendación inicial:} Ágil con un MVP acotado, una persona responsable de priorizar y controles explícitos de privacidad, pago y conexión intermitente.
+
+\titulo{6. Recomendación y riesgos del escenario 2}
+Nos inclinamos por un enfoque ágil con ciclos breves y un producto mínimo viable. La dueña puede probar versiones con frecuencia y eso permite corregir el flujo de pedidos antes de las fiestas. Para que el alcance no crezca sin control, proponemos que Doña Rosa priorice un único backlog; las ideas de su hijo se registran y se evalúan, pero no entran automáticamente en las 14 semanas [4], [5].
+\begin{enumerate}[leftmargin=*,itemsep=1pt]
+\item \textbf{Cambios frecuentes:} el menú varía casi a diario y cambian las ideas de promociones. Una prioridad revisable permite ajustar la siguiente entrega sin rehacer todo el plan.
+\item \textbf{Cliente disponible:} Doña Rosa puede probar versiones a diario. Sus observaciones se pueden convertir en cambios pequeños y comprobables.
+\item \textbf{Plazo y recursos fijos:} con 14 semanas y dos desarrolladores a medio tiempo, conviene entregar primero catálogo, pedido, modalidad de entrega y confirmación de transferencia.
+\end{enumerate}
+La cascada ayudaría a describir el alcance y el precio fijo, pero los cambios harían costosa una definición cerrada demasiado temprano. El modelo iterativo también sería viable; elegimos el ágil porque el escenario ofrece una usuaria disponible para revisar y reordenar prioridades. Privacidad y pago deben formar parte de los criterios de aceptación desde el primer incremento [7].
+
+\begin{tabularx}{\linewidth}{@{}p{6cm}Y@{}}
+\rowcolor{verde}\color{white}\textbf{Riesgo}&\color{white}\textbf{Mitigación que proponemos}\\\midrule
+Se agregan puntos, promociones y tarjeta aunque no cambien el plazo ni el presupuesto.&Acordar el MVP y una persona que priorice; si se suma una función, decidir explícitamente cuál sale del alcance inicial.\\
+Un corte de datos duplica pedidos o deja una transferencia sin conciliar; también pueden exponerse datos personales.&Probar en Android de gama baja y con pérdida de conexión; confirmar el estado del pago, controlar reintentos para evitar duplicados y guardar solo los datos necesarios.\\
+\end{tabularx}
+
+\titulo{7. Continuación del trabajo grupal}
+Este documento deja resueltos los criterios y la comparación inicial de los escenarios 1 y 2. Para completar el producto de la guía, el grupo todavía debe agregar los escenarios 3 y 4 y elegir el escenario que desarrollará para actores y framework de IR. También registraremos en clase el aporte de cada integrante, según lo que efectivamente realice cada uno. La norma de ingeniería de requisitos servirá como referencia para organizar actividades y evidencia durante ese trabajo [6].
+
+\begin{thebibliography}{9}
+\bibitem{guia} G. C. Guerrero-Ulloa, \textbf{GA-PRAC-01: Comparación entre modelos de proceso de requisitos en escenarios reales}, material complementario y guía-rúbrica, ISR-401, UTEQ, SPA 2026--2027, pp. 5--6.
+\bibitem{royce} W. W. Royce, ``Managing the development of large software systems,'' in \textbf{Proc. IEEE WESCON}, Los Angeles, CA, USA, Aug. 1970, pp. 1--9.
+\bibitem{boehm} B. W. Boehm, ``A spiral model of software development and enhancement,'' \textbf{Computer}, vol. 21, no. 5, pp. 61--72, May 1988, doi: 10.1109/2.59.
+\bibitem{manifesto} K. Beck et al., ``Manifesto for Agile Software Development,'' 2001. [Online]. Available: \href{https://agilemanifesto.org/}{agilemanifesto.org}
+\bibitem{scrum} K. Schwaber and J. Sutherland, \textbf{The Scrum Guide: The Definitive Guide to Scrum: The Rules of the Game}, Nov. 2020. [Online]. Available: \href{https://scrumguides.org/scrum-guide.html}{scrumguides.org}
+\bibitem{iso} ISO/IEC/IEEE, \textbf{ISO/IEC/IEEE 29148:2018, Systems and software engineering---Life cycle processes---Requirements engineering}, 2nd ed. Geneva, Switzerland: ISO, 2018. [Online]. Available: \href{https://www.iso.org/standard/72089.html}{iso.org/standard/72089.html}
+\bibitem{lopdp} Asamblea Nacional del Ecuador, ``Ley Orgánica de Protección de Datos Personales,'' Quinto Suplemento del Registro Oficial No. 459, 26 May 2021. [Online]. Available: \href{https://www.registroficial.gob.ec/quinto-suplemento-al-registro-oficial-no-459/}{registroficial.gob.ec}
+\end{thebibliography}
+
+\end{document}

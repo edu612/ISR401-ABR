@@ -1,0 +1,9 @@
+FORM-PC-01/build/
+FORM-PC-01/*.aux
+FORM-PC-01/*.log
+FORM-PC-01/*.out
+FORM-PC-01/*.synctex.gz
+FORM-PC-01/*.fls
+FORM-PC-01/*.fdb_latexmk
+__pycache__/
+*.py[cod]
