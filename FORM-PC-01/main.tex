@@ -11,15 +11,19 @@
 \definecolor{verde}{HTML}{174A6E}
 \definecolor{azul}{HTML}{174A6E}
 \definecolor{palido}{HTML}{EAF2F7}
-\renewcommand{\arraystretch}{1.12}
+\newcommand{\separa}{\hspace{0.25em}\raisebox{0.25ex}{\rule{0.38ex}{0.38ex}}\hspace{0.25em}}
+\renewcommand{\arraystretch}{1.16}
+\setlength{\extrarowheight}{1pt}
+\setlength{\LTpre}{7pt}
+\setlength{\LTpost}{7pt}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{5pt}
 \setlength{\tabcolsep}{4pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{UTEQ · Ingeniería de Requisitos (ISR-401)}
-\fancyhead[R]{GA-PRAC-01 · Avance grupal}
-\fancyfoot[L]{Alvarez · Briones · Rivera}
+\fancyhead[L]{UTEQ \separa Ingeniería de Requisitos (ISR-401)}
+\fancyhead[R]{GA-PRAC-01 \separa Comparación}
+\fancyfoot[L]{ISR-401 \separa Ingeniería de Requisitos}
 \fancyfoot[R]{Página \thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -31,12 +35,12 @@
 
 \begin{center}
 {\Large\bfseries\textcolor{verde}{Comparación de modelos de proceso de requisitos}}\\[3pt]
-{\large PC1 · GA-PRAC-01 · Avance de los escenarios 1 y 2}
+{\large PC1 \separa GA-PRAC-01 \separa Avance de los escenarios 1 y 2}
 \end{center}
 \vspace{3pt}
 \textbf{Integrantes:} Alvarez Rubio Rai Eduardo; Briones Solorzano William Adrian; Rivera Rodriguez Joseph Jeremy\\
-\textbf{Asignatura:} ISR-401 · Ingeniería de Requisitos · UTEQ\\
-\textbf{Alcance:} En este avance trabajamos los criterios de comparación y los dos primeros escenarios de la guía. Dejamos completas sus matrices y recomendaciones para que el grupo pueda continuar con los escenarios 3 y 4 y el apartado de actores y framework. Los datos de los casos se toman del material de clase [1].
+\textbf{Asignatura:} ISR-401 \separa Ingeniería de Requisitos \separa UTEQ \hfill \textbf{Fecha:} 12 de noviembre de 2026\\
+En esta comparación revisamos cómo responden los modelos secuencial, iterativo e incremental y ágil a las condiciones concretas de cada escenario. Para valorarlos considero los cambios, la participación de los actores, la criticidad, los riesgos, la evidencia requerida y los recursos disponibles [1].
 
 \titulo{1. Criterios de comparación}
 Para comparar los modelos usamos seis criterios comunes en ambos casos. La escala indica el ajuste del modelo a las condiciones descritas: \textbf{Alta} significa buen encaje; \textbf{Media}, que puede funcionar si añadimos controles; y \textbf{Baja}, que sus supuestos habituales chocan con algún dato importante. En cada valoración explicamos el motivo.
@@ -63,7 +67,7 @@ Iterativo e incremental&Construye el sistema en ciclos y entrega partes verifica
 \normalsize
 La ingeniería de requisitos acompaña el ciclo de vida: identifica y analiza necesidades, las acuerda, documenta, valida y gestiona sus cambios [6]. Por eso no comparamos solo rapidez; también consideramos participación, criticidad y evidencia.
 
-\titulo{3. Escenario 1 · Control embebido para una extractora de palma}
+\titulo{3. Escenario 1 \separa Control embebido para una extractora de palma}
 Extractora Río Lindo procesa cerca de 180 toneladas diarias en temporada alta. El controlador regulará esterilizadores y niveles de tanques. Hubo dos desbordes y una quemadura leve. Las reglas de seguridad son estables, pero el proveedor de sensores y válvulas se define en el mes 3 y falta aclarar la interfaz de operación. La aseguradora exige requisitos de seguridad aprobados y pruebas documentadas [1].
 
 \scriptsize
@@ -95,7 +99,7 @@ La selección tardía de sensores reduce el tiempo para resolver incompatibilida
 Una protección puede no considerar todos los turnos o quedar sin aprobación.&Consultar a operadores de los tres turnos y relacionar cada regla con su prueba, resultado y aprobación antes de la puesta en marcha.\\
 \end{tabularx}
 
-\titulo{5. Escenario 2 · Pedidos móviles para Sabores de la Abuela Rosa}
+\titulo{5. Escenario 2 \separa Pedidos móviles para Sabores de la Abuela Rosa}
 El emprendimiento recibe unos 70 pedidos al día por mensajería. La dueña pierde mensajes y se confunden direcciones; está disponible a diario para probar, pero cambia prioridades. Hay 14 semanas, presupuesto pequeño y dos desarrolladores a medio tiempo. La aplicación debe considerar teléfonos Android de gama baja, conexión intermitente, datos personales y conciliación de transferencias [1], [7].
 
 \scriptsize
