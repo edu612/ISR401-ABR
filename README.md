@@ -1,6 +1,6 @@
 # ISR401 · GA-PRAC-01
 
-En este repositorio estamos armando en grupo la comparación de modelos de proceso de requisitos aplicada a los cuatro escenarios de la guía. Por ahora, el avance cubre los escenarios 1 y 2; los escenarios 3 y 4 y el framework de IR quedan para integrar con el resto del equipo.
+En este repositorio estamos armando en grupo la comparación de modelos de proceso de requisitos aplicada a los cuatro escenarios de la guía. 
 
 ## Archivos del informe
 

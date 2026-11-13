@@ -30,22 +30,27 @@
 \newcommand{\titulo}[1]{\section*{\textcolor{verde}{#1}}}
 \newcommand{\subtitulo}[1]{\subsection*{\textcolor{azul}{#1}}}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
-
 \begin{document}
-
+\par
 \begin{center}
 {\Large\bfseries\textcolor{verde}{Comparación de modelos de proceso de requisitos}}\\[3pt]
-{\large PC1 \separa GA-PRAC-01 \separa Avance de los escenarios 1, 2 y 3}
+{\large PC1 \separa GA-PRAC-01 \separa Comparación de los escenarios 1, 2, 3 y 4}
 \end{center}
+\par
 \vspace{3pt}
+\par
 \textbf{Integrantes:} Alvarez Rubio Rai Eduardo; Briones Solorzano William Adrian; Rivera Rodriguez Joseph Jeremy\\
+\par
 \textbf{Asignatura:} ISR-401 \separa Ingeniería de Requisitos \separa UTEQ \hfill \textbf{Fecha:} 12 de noviembre de 2026\\
-En esta comparación revisamos cómo responden los modelos secuencial, iterativo e incremental y ágil a las condiciones concretas de cada escenario. Para valorarlos considero los cambios, la participación de los actores, la criticidad, los riesgos, la evidencia requerida y los recursos disponibles [1].
-
+\par
+En esta comparación revisamos cómo responden los modelos secuencial, iterativo e incremental y ágil a las condiciones concretas de cada escenario. Para valorarlos consideramos los cambios, la participación de los actores, la criticidad, los riesgos, la evidencia requerida y los recursos disponibles [1].
+\par
 \titulo{1. Criterios de comparación}
-Para comparar los modelos usamos seis criterios comunes en ambos casos. La escala indica el ajuste del modelo a las condiciones descritas: \textbf{Alta} significa buen encaje; \textbf{Media}, que puede funcionar si añadimos controles; y \textbf{Baja}, que sus supuestos habituales chocan con algún dato importante. En cada valoración explicamos el motivo.
-
+\par
+Para comparar los modelos usamos seis criterios comunes en los escenarios. La escala indica el ajuste del modelo a las condiciones descritas: \textbf{Alta} significa buen encaje; \textbf{Media}, que puede funcionar si añadimos controles; y \textbf{Baja}, que sus supuestos habituales chocan con algún dato importante. En cada valoración explicamos el motivo.
+\par
 \small
+\par
 \begin{tabularx}{\linewidth}{@{}p{3.4cm}Y@{}}
 \rowcolor{verde}\color{white}\textbf{Criterio}&\color{white}\textbf{Qué observamos en el escenario}\\\midrule
 K1. Estabilidad y cambios&Qué necesidades están claras y cuáles pueden variar durante el trabajo.\\
@@ -55,22 +60,28 @@ K4. Riesgo principal&Qué incertidumbre puede causar retrabajo, daño o incumpli
 K5. Documentación y marco normativo o contractual&Qué evidencias, aprobaciones y obligaciones hay que conservar.\\
 K6. Equipo, plazo y presupuesto&Disponibilidad del equipo, fecha límite y límites de costo.\\
 \end{tabularx}
-
+\par
 \titulo{2. Modelos considerados}
+\par
 \small
+\par
 \begin{tabularx}{\linewidth}{@{}p{2.7cm}Y Y@{}}
 \rowcolor{verde}\color{white}\textbf{Modelo}&\color{white}\textbf{Cómo organiza el trabajo}&\color{white}\textbf{Cuándo suele encajar}\\\midrule
 Secuencial o cascada&Ordena requisitos, diseño, construcción, pruebas y entrega en etapas con revisiones. Los resultados de cada etapa sirven de base a la siguiente.&Cuando las necesidades se conocen temprano y hacen falta hitos y documentación formal. Royce también muestra retroalimentación entre etapas; no lo interpreto como una ausencia absoluta de iteración [2].\\
-Iterativo e incremental&Construye el sistema en ciclos y entrega partes verificables. Lo aprendido en una entrega orienta la siguiente, y se pueden priorizar incertidumbres [3].&Cuando conviene probar pronto una función o interfaz sin perder planificación, pruebas y documentación.\\
+Iterativo e incremental&Construye el sistema en ciclos y entrega partes verificables. Lo aprendido en una entrega orienta la siguiente; en un enfoque guiado por riesgos se priorizan las incertidumbres técnicas [3].&Cuando conviene probar pronto una función o interfaz sin perder planificación, pruebas y documentación.\\
 Ágil&Trabaja con entregas pequeñas, prioridades revisables y colaboración frecuente con quien representa a los usuarios. Scrum es un ejemplo, no el único enfoque ágil [4], [5].&Cuando cambian las necesidades y una persona responsable puede revisar y priorizar con frecuencia. La agilidad no elimina la documentación ni las obligaciones legales [4], [6].\\
 \end{tabularx}
+\par
 \normalsize
+\par
 La ingeniería de requisitos acompaña el ciclo de vida: identifica y analiza necesidades, las acuerda, documenta, valida y gestiona sus cambios [6]. Por eso no comparamos solo rapidez; también consideramos participación, criticidad y evidencia.
-
+\par
 \titulo{3. Escenario 1 \separa Control embebido para una extractora de palma}
+\par
 Extractora Río Lindo procesa cerca de 180 toneladas diarias en temporada alta. El controlador regulará esterilizadores y niveles de tanques. Hubo dos desbordes y una quemadura leve. Las reglas de seguridad son estables, pero el proveedor de sensores y válvulas se define en el mes 3 y falta aclarar la interfaz de operación. La aseguradora exige requisitos de seguridad aprobados y pruebas documentadas [1].
-
+\par
 \scriptsize
+\par
 \begin{longtable}{@{}p{3.15cm}p{7.15cm}p{7.15cm}p{7.15cm}@{}}
 \rowcolor{verde}\color{white}\textbf{Criterio}&\color{white}\textbf{Secuencial (cascada)}&\color{white}\textbf{Iterativo e incremental}&\color{white}\textbf{Ágil}\\\endfirsthead
 \rowcolor{verde}\color{white}\textbf{Criterio}&\color{white}\textbf{Secuencial (cascada)}&\color{white}\textbf{Iterativo e incremental}&\color{white}\textbf{Ágil}\\\endhead
@@ -81,28 +92,35 @@ K4. Riesgo principal&\textbf{BAJA.} Una integración tardía podría descubrir i
 K5. Evidencia y reglas&\textbf{ALTA.} Sus etapas facilitan mantener requisitos aprobados y evidencias de prueba para cada protección.&\textbf{ALTA.} Puede conservar trazabilidad, revisión y aprobación dentro de cada incremento.&\textbf{MEDIA.} Es viable si se planifica explícitamente la documentación que exige la aseguradora.\\\hline
 K6. Equipo, plazo y recursos&\textbf{MEDIA.} Hay diez meses y cinco perfiles especializados, pero poca holgura si la integración se retrasa.&\textbf{ALTA.} El equipo puede repartir incrementos y reservar hitos antes de la temporada alta.&\textbf{MEDIA.} Los ciclos son posibles, pero la integración de hardware y seguridad exige coordinación adicional.\\
 \end{longtable}
+\par
 \normalsize
+\par
 \textbf{Recomendación inicial:} Iterativo e incremental con hitos formales de seguridad y una línea base documentada.
-
+\par
 \titulo{4. Recomendación y riesgos del escenario 1}
+\par
 Elegimos un enfoque iterativo e incremental con revisiones formales. Por la criticidad no conviene esperar al final para comprobar el sistema completo: queremos verificar protecciones e integración por partes, y conservar la evidencia aprobada en cada avance.
+\par
 \begin{enumerate}[leftmargin=*,itemsep=1pt]
 \item \textbf{Riesgo de integración:} sensores y válvulas se seleccionan en el mes 3. Un prototipo de interfaz y pruebas tempranas ayudan a detectar incompatibilidades antes de la integración completa.
 \item \textbf{Seguridad verificable:} los desbordes y la quemadura justifican priorizar alarmas e interbloqueos, probar cada protección y guardar la aprobación requerida por la aseguradora.
 \item \textbf{Participación programable:} el jefe tiene dos mañanas disponibles y los operadores trabajan en turnos. Las revisiones acordadas por ciclo permiten validar sin exigir disponibilidad diaria.
 \end{enumerate}
+\par
 La cascada aporta orden, pero deja expuesto el calendario a la interfaz que aún no se conoce. Un enfoque ágil puro depende más de intercambios frecuentes, difíciles de sostener con la disponibilidad indicada. La tensión es que la seguridad está definida, mientras la integración no; por eso conservamos hitos y trazabilidad dentro del trabajo iterativo [2], [3], [6].
-
+\par
 \begin{tabularx}{\linewidth}{@{}p{6cm}Y@{}}
 \rowcolor{verde}\color{white}\textbf{Riesgo}&\color{white}\textbf{Mitigación que proponemos}\\\midrule
 La selección tardía de sensores reduce el tiempo para resolver incompatibilidades.&Definir una interfaz provisional; probar con emuladores y, al escoger proveedor, reservar una revisión de integración.\\
 Una protección puede no considerar todos los turnos o quedar sin aprobación.&Consultar a operadores de los tres turnos y relacionar cada regla con su prueba, resultado y aprobación antes de la puesta en marcha.\\
 \end{tabularx}
-
+\par
 \titulo{5. Escenario 2 \separa Pedidos móviles para Sabores de la Abuela Rosa}
+\par
 El emprendimiento recibe unos 70 pedidos al día por mensajería. La dueña pierde mensajes y se confunden direcciones; está disponible a diario para probar, pero cambia prioridades. Hay 14 semanas, presupuesto pequeño y dos desarrolladores a medio tiempo. La aplicación debe considerar teléfonos Android de gama baja, conexión intermitente, datos personales y conciliación de transferencias [1], [7].
-
+\par
 \scriptsize
+\par
 \begin{longtable}{@{}p{3.15cm}p{7.15cm}p{7.15cm}p{7.15cm}@{}}
 \rowcolor{verde}\color{white}\textbf{Criterio}&\color{white}\textbf{Secuencial (cascada)}&\color{white}\textbf{Iterativo e incremental}&\color{white}\textbf{Ágil}\\\endfirsthead
 \rowcolor{verde}\color{white}\textbf{Criterio}&\color{white}\textbf{Secuencial (cascada)}&\color{white}\textbf{Iterativo e incremental}&\color{white}\textbf{Ágil}\\\endhead
@@ -113,37 +131,45 @@ K4. Riesgo principal&\textbf{BAJA.} Mensajes perdidos, direcciones erróneas o p
 K5. Evidencia y reglas&\textbf{ALTA.} Documentación inicial y alcance acordado ayudan a controlar el precio fijo.&\textbf{MEDIA.} Requiere definir terminado y mantener evidencia de privacidad y pago en cada incremento.&\textbf{MEDIA.} Se adapta a cambios si registra decisiones, aceptación y tratamiento de datos conforme a la ley [7].\\\hline
 K6. Equipo, plazo y recursos&\textbf{MEDIA.} El plazo de 14 semanas y presupuesto pequeño favorecen planificar, pero el alcance cerrado es frágil ante cambios.&\textbf{ALTA.} Dos personas a medio tiempo pueden entregar primero el núcleo y dejar mejoras para después.&\textbf{ALTA.} Un MVP y prioridades claras protegen el plazo y hacen visible lo que cabe en el presupuesto.\\
 \end{longtable}
+\par
 \normalsize
+\par
 \textbf{Recomendación inicial:} Ágil con un MVP acotado, una persona responsable de priorizar y controles explícitos de privacidad, pago y conexión intermitente.
-
+\par
 \titulo{6. Recomendación y riesgos del escenario 2}
+\par
 Nos inclinamos por un enfoque ágil con ciclos breves y un producto mínimo viable. La dueña puede probar versiones con frecuencia y eso permite corregir el flujo de pedidos antes de las fiestas. Para que el alcance no crezca sin control, proponemos que Doña Rosa priorice un único backlog; las ideas de su hijo se registran y se evalúan, pero no entran automáticamente en las 14 semanas [4], [5].
+\par
 \begin{enumerate}[leftmargin=*,itemsep=1pt]
 \item \textbf{Cambios frecuentes:} el menú varía casi a diario y cambian las ideas de promociones. Una prioridad revisable permite ajustar la siguiente entrega sin rehacer todo el plan.
 \item \textbf{Cliente disponible:} Doña Rosa puede probar versiones a diario. Sus observaciones se pueden convertir en cambios pequeños y comprobables.
 \item \textbf{Plazo y recursos fijos:} con 14 semanas y dos desarrolladores a medio tiempo, conviene entregar primero catálogo, pedido, modalidad de entrega y confirmación de transferencia.
 \end{enumerate}
+\par
 La cascada ayudaría a describir el alcance y el precio fijo, pero los cambios harían costosa una definición cerrada demasiado temprano. El modelo iterativo también sería viable; elegimos el ágil porque el escenario ofrece una usuaria disponible para revisar y reordenar prioridades. Privacidad y pago deben formar parte de los criterios de aceptación desde el primer incremento [7].
-
+\par
 \begin{tabularx}{\linewidth}{@{}p{6cm}Y@{}}
 \rowcolor{verde}\color{white}\textbf{Riesgo}&\color{white}\textbf{Mitigación que proponemos}\\\midrule
 Se agregan puntos, promociones y tarjeta aunque no cambien el plazo ni el presupuesto.&Acordar el MVP y una persona que priorice; si se suma una función, decidir explícitamente cuál sale del alcance inicial.\\
 Un corte de datos duplica pedidos o deja una transferencia sin conciliar; también pueden exponerse datos personales.&Probar en Android de gama baja y con pérdida de conexión; confirmar el estado del pago, controlar reintentos para evitar duplicados y guardar solo los datos necesarios.\\
 \end{tabularx}
-
+\par
 \titulo{7. Escenario 3 \separa Sistema de trámites municipales contratado por contratación pública}
+\par
 El GAD Municipal del cantón San Isidro del Baba, en la provincia de Los Ríos, atiende cerca de 9\,000 trámites al año relacionados con permisos de funcionamiento, patentes y certificados de no adeudar. Actualmente, los ciudadanos deben acudir hasta tres veces a ventanilla y los técnicos revisan carpetas físicas. Por esta razón, el municipio contrató el desarrollo de un sistema web que permita realizar los trámites en línea.
-
+\par
 El contrato establece tres entregables con fechas y pagos asociados: la especificación de requisitos aprobada en el mes 2, el sistema instalado y probado en el mes 6, y la capacitación junto con el acta de entrega-recepción definitiva en el mes 7. Cada día de retraso genera una multa y los cambios de alcance que aumenten el costo necesitan un trámite formal que puede tardar varias semanas.
-
+\par
 El administrador del contrato, Fabián Zambrano, es el único canal oficial y se reúne con el equipo una vez por semana. La jefa de rentas y los técnicos de ventanilla, que serán los principales usuarios, participan únicamente cuando él los convoca. Además, la jefa de rentas ya modificó dos veces el flujo de aprobación de patentes y el concejo municipal está analizando una nueva ordenanza de tasas que podría aprobarse en el cuarto mes y cambiar los cálculos de cobro.
-
+\par
 El sistema manejará datos personales y pagos de tasas municipales, por lo que los errores podrían afectar dinero público y generar reclamos. La empresa contratista cuenta con seis personas y debe instalar el sistema en los servidores del municipio. También tendrá que consultar información catastral almacenada en una base de datos antigua que no cuenta con documentación.
-
+\par
 \subtitulo{Matriz comparativa del escenario 3}
+\par
 La valoración considera las condiciones del contrato, la disponibilidad de los usuarios, los posibles cambios en los trámites y la dificultad de integración con la base de datos catastral. Se utiliza la escala Alta, Media y Baja: \textbf{Alta} representa un buen ajuste del modelo, \textbf{Media} indica que puede funcionar con controles adicionales y \textbf{Baja} señala que sus características presentan dificultades frente al escenario.
-
+\par
 \scriptsize
+\par
 \begin{longtable}{@{}p{3.15cm}p{7.15cm}p{7.15cm}p{7.15cm}@{}}
 \rowcolor{verde}\color{white}\textbf{Criterio}&\color{white}\textbf{Secuencial (cascada)}&\color{white}\textbf{Iterativo e incremental}&\color{white}\textbf{Ágil}\\\endfirsthead
 \rowcolor{verde}\color{white}\textbf{Criterio}&\color{white}\textbf{Secuencial (cascada)}&\color{white}\textbf{Iterativo e incremental}&\color{white}\textbf{Ágil}\\\endhead
@@ -154,23 +180,29 @@ K4. Riesgo principal&\textbf{BAJA.} La base catastral antigua no está documenta
 K5. Documentación y marco normativo o contractual&\textbf{ALTA.} Los pliegos exigen una especificación aprobada en el mes 2 y entregables formales. Este modelo facilita establecer una línea base y conservar aprobaciones.&\textbf{ALTA.} Puede mantener una especificación inicial aprobada y actualizarla por versiones, conservando trazabilidad de requisitos, pruebas y cambios en cada incremento.&\textbf{MEDIA.} Puede documentar los requisitos y las decisiones, pero debe reforzar el registro de aprobaciones y cambios para cumplir con los entregables y las condiciones de contratación pública.\\\hline
 K6. Equipo, plazo y recursos (complementario)&\textbf{MEDIA.} El equipo de seis personas y el plazo de siete meses permiten organizar fases, pero los cambios o problemas de integración pueden retrasar los entregables y generar multas.&\textbf{ALTA.} Los seis integrantes pueden distribuir el trabajo por módulos y organizar incrementos que se relacionen con las fechas de entrega de los meses 2, 6 y 7.&\textbf{MEDIA.} Los ciclos cortos pueden ayudar a entregar funciones, pero la disponibilidad limitada del cliente y los procedimientos formales de cambio dificultan mantener una dinámica ágil continua.\\
 \end{longtable}
+\par
 \normalsize
+\par
 \textbf{Recomendación inicial:} Iterativo e incremental con hitos contractuales, una especificación de requisitos aprobada y un procedimiento formal para gestionar los cambios de alcance.
-
+\par
 \titulo{8. Recomendación y riesgos del escenario 3}
+\par
 Para este escenario recomendamos un modelo \textbf{iterativo e incremental con controles formales en los entregables del contrato}. No consideramos conveniente trabajar con una cascada completamente rígida, porque existen requisitos que todavía pueden cambiar. Tampoco elegiríamos un enfoque ágil puro, debido a la disponibilidad limitada de los usuarios y a las condiciones de contratación pública.
-
+\par
 Las razones principales son las siguientes:
+\par
 \begin{enumerate}[leftmargin=*,itemsep=1pt]
 \item \textbf{Cambios en los requisitos (K1):} la jefa de rentas ya modificó dos veces el flujo de aprobación de patentes y existe una posible ordenanza que cambiaría los cálculos de cobro en el cuarto mes. Trabajar por incrementos permitiría revisar esas funciones cuando se confirmen las nuevas reglas, evitando modificar todo el sistema.
 \item \textbf{Riesgo de integración (K4):} el sistema debe consultar una base de datos catastral antigua que nadie ha documentado. Si se deja esta integración para el final, podrían aparecer incompatibilidades cuando quede poco tiempo para entregar. Por eso, conviene realizar pruebas de conexión y revisar la información desde los primeros incrementos.
 \item \textbf{Condiciones del contrato (K5 y K6):} el municipio exige una especificación aprobada en el mes 2, el sistema instalado y probado en el mes 6 y la capacitación con el acta definitiva en el mes 7. El modelo iterativo permite desarrollar por partes, pero conservando revisiones, documentación y aprobaciones para cumplir con esos compromisos.
 \end{enumerate}
+\par
 La \textbf{cascada} se podría utilizar para organizar los documentos y las aprobaciones del contrato, pero como modelo principal sería poco flexible ante los cambios del flujo de patentes y la posible ordenanza. Por otro lado, el modelo \textbf{ágil} permitiría revisar prioridades con frecuencia, pero depende de una participación constante del cliente que no está garantizada en este escenario. Además, los cambios que aumenten el costo requieren un procedimiento formal.
-
+\par
 La tensión principal está entre la necesidad de adaptarse a los cambios municipales y la obligación de cumplir fechas y entregables contractuales. Por eso, proponemos trabajar mediante incrementos planificados, sin perder la aprobación formal de los requisitos ni la trazabilidad de las modificaciones.
-
+\par
 \subtitulo{Riesgos del modelo elegido}
+\par
 \begin{tabularx}{\linewidth}{@{}p{6cm}Y@{}}
 \rowcolor{verde}\color{white}\textbf{Riesgo}&\color{white}\textbf{Mitigación que proponemos}\\\midrule
 La nueva ordenanza de tasas se aprueba en el cuarto mes y modifica los cálculos de cobro.&Mantener separados los parámetros de cálculo de tasas de otras funciones del sistema. Registrar el cambio, analizar su impacto y solicitar la aprobación formal antes de incorporarlo al alcance contratado.\\
@@ -178,12 +210,15 @@ La base catastral antigua presenta incompatibilidades o datos incompletos durant
 Los técnicos de ventanilla y la jefa de rentas no participan a tiempo en las revisiones.&Programar las reuniones con anticipación a través del administrador del contrato y dejar registradas las observaciones, validaciones y aprobaciones de cada revisión.\\
 Un cambio solicitado aumenta el alcance y retrasa los entregables.&Registrar cada solicitud, evaluar su impacto en costo y tiempo y tramitar su aprobación formal antes de comprometer su desarrollo.\\
 \end{tabularx}
-
+\par
 \titulo{9. Actores y framework de Ingeniería de Requisitos del escenario 3}
+\par
 Para este escenario se utiliza el modelo iterativo e incremental recomendado anteriormente. La identificación de actores permite reconocer quién proporciona información, quién aprueba los requisitos, quién utilizará el sistema y quién se encarga de construirlo. El framework de Ingeniería de Requisitos se organiza mediante actividades centrales, actividades transversales y artefactos, considerando también el contexto del sistema [6].
-
+\par
 \subtitulo{9.1. Actores del escenario}
+\par
 \small
+\par
 \begin{tabularx}{\linewidth}{@{}p{4.6cm}Y Y@{}}
 \rowcolor{verde}\color{white}\textbf{Actor del escenario}&\color{white}\textbf{Rol en el proceso de requisitos}&\color{white}\textbf{Cuándo y cómo participa}\\\midrule
 \textbf{GAD Municipal de San Isidro del Baba}&Cliente y entidad contratante. Define la necesidad del sistema y establece las condiciones de aceptación mediante el contrato.&Participa al inicio del proyecto mediante los pliegos y durante las aprobaciones de los entregables establecidos.\\
@@ -194,12 +229,15 @@ Para este escenario se utiliza el modelo iterativo e incremental recomendado ant
 \textbf{Equipo de desarrollo y pruebas de la empresa contratista}&Construye los incrementos del sistema y comprueba que cumplan los requisitos acordados.&Participa en cada ciclo para implementar las funciones, realizar pruebas y corregir los problemas encontrados.\\
 \textbf{Responsable técnico municipal (por identificar)}&Debe coordinar los aspectos técnicos relacionados con los servidores municipales y el acceso a la base de datos catastral.&Su participación debe coordinarse antes de las pruebas de integración y de la instalación. El escenario no identifica a una persona concreta para este rol.\\
 \end{tabularx}
+\par
 \normalsize
-
+\par
 \subtitulo{9.2. Aplicación del framework de IR}
+\par
 El proceso se organiza en etapas e incrementos relacionados con los entregables contractuales. En cada uno se realizan actividades centrales de elicitación, documentación y negociación; también se mantienen actividades transversales de validación y gestión.
-
+\par
 \scriptsize
+\par
 \begin{longtable}{@{}p{3.15cm}p{7.15cm}p{7.15cm}p{7.15cm}@{}}
 \rowcolor{verde}\color{white}\textbf{Fase o iteración}&\color{white}\textbf{Actividades centrales (elicitación, documentación y negociación)}&\color{white}\textbf{Actividades transversales (validación y gestión)}&\color{white}\textbf{Artefactos producidos}\\\endfirsthead
 \rowcolor{verde}\color{white}\textbf{Fase o iteración}&\color{white}\textbf{Actividades centrales (elicitación, documentación y negociación)}&\color{white}\textbf{Actividades transversales (validación y gestión)}&\color{white}\textbf{Artefactos producidos}\\\endhead
@@ -209,22 +247,71 @@ El proceso se organiza en etapas e incrementos relacionados con los entregables 
 \textbf{Iteración 3: integración y validación del sistema (meses 5--6)}&Completar los módulos y documentar los requisitos pendientes. Revisar con los usuarios los procesos completos antes de la instalación.&Ejecutar pruebas funcionales y de integración, comprobar los requisitos y registrar defectos y correcciones. Preparar la aprobación del entregable del mes 6.&Versión integrada del sistema, matriz de trazabilidad, casos y resultados de pruebas, registro de defectos y acta de instalación y pruebas.\\\hline
 \textbf{Fase de cierre y entrega (mes 7)}&Recopilar observaciones finales, documentar las actividades de capacitación y explicar el uso del sistema a los usuarios municipales.&Verificar el cumplimiento de los requisitos acordados, gestionar las observaciones finales y obtener la aceptación formal del municipio.&Material de capacitación, manual de usuario, registro de observaciones y acta de entrega-recepción definitiva.\\
 \end{longtable}
+\par
 \normalsize
+\par
 En este escenario, las actividades centrales permiten conocer cómo se realizan los trámites y convertir esas necesidades en requisitos que puedan implementarse. Las actividades transversales ayudan a comprobar que lo solicitado sea correcto y a controlar los cambios que puedan aparecer durante el proyecto.
-
+\par
 Los artefactos no se producen únicamente al inicio: se actualizan conforme avanzan las iteraciones. Esto permite conservar la especificación aprobada, registrar las modificaciones y relacionar cada requisito con sus pruebas y entregables. De esta manera, el equipo puede adaptarse a las necesidades confirmadas del municipio sin perder el control del contrato.
+\par
+\titulo{10. Escenario 4 \separa Plataforma web para una cooperativa de cacao}
+\par
+La Cooperativa Agroproductiva Frutos del Estero reúne a 640 productores de Mocache, Ventanas y Valencia. Necesita consultar entregas, liquidaciones y créditos, además de publicar avisos. Las reglas de pago son estables, pero las exigencias de trazabilidad cambian por temporada. El centro de acopio tiene internet inestable y el donante pide avances semestrales con funciones terminadas [1].
+\par
+\scriptsize
+\par
+\begin{longtable}{@{}p{3.15cm}p{7.15cm}p{7.15cm}p{7.15cm}@{}}
+\rowcolor{verde}\color{white}\textbf{Criterio}&\color{white}\textbf{Secuencial (cascada)}&\color{white}\textbf{Iterativo e incremental}&\color{white}\textbf{Ágil}\\\endfirsthead
+\rowcolor{verde}\color{white}\textbf{Criterio}&\color{white}\textbf{Secuencial (cascada)}&\color{white}\textbf{Iterativo e incremental}&\color{white}\textbf{Ágil}\\\endhead
+K1. Estabilidad y cambios&\textbf{MEDIA.} Las reglas de liquidación del estatuto son estables, pero las exigencias de trazabilidad y certificación cambian cada temporada.&\textbf{ALTA.} Permite fijar primero el cálculo de liquidaciones y ajustar la trazabilidad en ciclos cuando cambien los exportadores.&\textbf{ALTA.} La lista priorizada admite cambios de certificación por temporada, aunque las reglas del estatuto no necesitan revisión continua.\\\hline
+K2. Partes interesadas&\textbf{MEDIA.} Las aprobaciones por fase pueden coincidir con la directiva mensual, pero consultar a socios solo en acopio o asambleas limita la elicitación inicial.&\textbf{ALTA.} Las revisiones se pueden programar en días de acopio y reuniones mensuales, sin requerir decisiones diarias de los socios.&\textbf{BAJA.} Aunque la gerente está casi a diario, los cambios importantes dependen de la directiva mensual y los socios se consultan durante el acopio o en asambleas trimestrales.\\\hline
+K3. Sistema y criticidad&\textbf{ALTA.} Una especificación aprobada ayuda a controlar cálculos de pagos y saldos de crédito, que afectan dinero y datos personales de 640 socios.&\textbf{ALTA.} Cada incremento puede verificar liquidaciones y créditos antes de habilitar nuevas consultas, con pruebas y trazabilidad.&\textbf{MEDIA.} Puede entregar consultas pronto, pero el manejo de pagos, créditos y datos personales exige controles documentados en cada ciclo.\\\hline
+K4. Riesgo principal&\textbf{BAJA.} Dejar para el final el registro sin conexión y su sincronización puede revelar tarde pérdidas o duplicaciones de entregas.&\textbf{ALTA.} Un incremento temprano de captura sin conexión permite probar sincronización y conflictos antes de conectar liquidaciones y créditos.&\textbf{MEDIA.} Las entregas cortas facilitan probar la sincronización, pero requieren reservar tiempo para integridad de registros y pruebas fuera de línea.\\\hline
+K5. Evidencia y reglas&\textbf{ALTA.} El estatuto fija las reglas de liquidación y existe supervisión externa; una especificación formal permite comprobar los cálculos y conservar evidencia.&\textbf{ALTA.} Puede mantener requisitos, pruebas y aprobaciones por versión, además de evidenciar funciones terminadas en informes semestrales al donante.&\textbf{MEDIA.} Es viable si conserva registros de decisiones y pruebas; el donante exige informes semestrales con funciones terminadas.\\\hline
+K6. Equipo, plazo y recursos&\textbf{MEDIA.} Cuatro personas y doce meses permiten planificar fases, pero un cierre tardío dificultaría mostrar funciones terminadas al sexto mes.&\textbf{ALTA.} Con cuatro personas se pueden priorizar incrementos verificables para los informes de los meses 6 y 12.&\textbf{MEDIA.} Las entregas breves ayudan al plazo, pero la aprobación mensual de la directiva puede frenar la repriorización continua.\\
+\end{longtable}
+\par
+\normalsize
+\par
+\textbf{Recomendación inicial:} Iterativo e incremental con requisitos de liquidación documentados desde el inicio, validación programada y evidencias de cada entrega.
+\par
+\titulo{11. Recomendación y riesgos del escenario 4}
+\par
+Elegimos el modelo iterativo e incremental porque permite conservar una base de requisitos estable para los pagos, mientras se aclaran la trazabilidad y el trabajo sin conexión. Este enfoque permite aprender de versiones sucesivas sin exigir que todos los requisitos estén cerrados desde el inicio [8]. Proponemos revisar y aprobar cada incremento con los actores disponibles, sin dar por hecho que la gerente puede autorizar todos los cambios. Los requisitos relativos a los datos personales deben documentarse y verificarse en cada versión [6], [7].
+\par
+\begin{enumerate}[leftmargin=*,itemsep=1pt]
+\item \textbf{Reglas estables y cambios por temporada (K1):} el estatuto fija el cálculo de liquidaciones, pero los exportadores modifican exigencias de trazabilidad. Podemos documentar primero las reglas de pago y revisar las de certificación en ciclos posteriores.
+\item \textbf{Participación limitada (K2):} los socios solo pueden consultarse en acopio o asambleas trimestrales, y la directiva aprueba cambios importantes mensualmente. Las validaciones se programan por incremento y las decisiones pendientes se elevan a la directiva.
+\item \textbf{Conexión inestable (K4):} las entregas deben registrarse sin internet y sincronizarse después. Conviene probar esa función en un incremento temprano para detectar duplicaciones o pérdidas antes de depender de ella para las liquidaciones.
+\item \textbf{Financiamiento y plazo (K6):} el donante exige funciones terminadas en informes semestrales y el equipo dispone de doce meses con cuatro personas. Se pueden planificar incrementos verificables antes de los meses 6 y 12.
+\end{enumerate}
+\par
+La cascada favorece documentar las reglas estables y atender la supervisión, pero podría detectar tarde problemas de sincronización y adaptarse con dificultad a cambios estacionales. Un ágil puro aprovecha la disponibilidad de la gerente, aunque ella no decide sola y los socios no pueden revisar continuamente. \textbf{La tensión principal} es la estabilidad de las reglas de liquidación y la necesidad de control formal, que apuntan a cascada; por eso proponemos una base aprobada y trazabilidad dentro del modelo iterativo [1], [6].
+\par
+\begin{tabularx}{\linewidth}{@{}p{6cm}Y@{}}
+\rowcolor{verde}\color{white}\textbf{Riesgo}&\color{white}\textbf{Mitigación que proponemos}\\\midrule
+Al integrar incrementos, un registro de entrega capturado sin conexión puede duplicarse o perderse al sincronizar y alterar la liquidación del socio.&Probar la captura y sincronización desde el primer incremento técnico; usar identificadores únicos, detectar reintentos y conciliar los registros antes de calcular pagos.\\
+Un incremento puede terminarse con reglas de trazabilidad que ya cambiaron, o quedar pendiente de aceptación por la directiva mensual.&Revisar requisitos de exportadores al iniciar cada ciclo, agendar aprobaciones con la directiva y mantener versiones de requisitos y pruebas para cada incremento.\\
+\end{tabularx}
 
-\titulo{10. Continuación del trabajo grupal}
-Este documento deja resueltos los criterios y la comparación de los escenarios 1, 2 y 3, e incluye los actores y el framework de IR del escenario 3. Para completar el producto de la guía, el grupo todavía debe agregar el escenario 4 y confirmar el escenario que desarrollará para actores y framework de IR. También registraremos en clase el aporte de cada integrante, según lo que efectivamente realice cada uno. La norma de ingeniería de requisitos servirá como referencia para organizar actividades y evidencia durante ese trabajo [6].
-
+\par
+\begingroup
+\par
+\footnotesize
+\par
 \begin{thebibliography}{9}
-\bibitem{guia} G. C. Guerrero-Ulloa, \textbf{GA-PRAC-01: Comparación entre modelos de proceso de requisitos en escenarios reales}, material complementario y guía-rúbrica, ISR-401, UTEQ, SPA 2026--2027, pp. 5--6.
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\bibitem{guia} G. C. Guerrero-Ulloa, \textbf{GA-PRAC-01: Comparación entre modelos de proceso de requisitos en escenarios reales}, material complementario y guía-rúbrica, ISR-401, UTEQ, SPA 2026--2027, pp. 5--9.
 \bibitem{royce} W. W. Royce, ``Managing the development of large software systems,'' in \textbf{Proc. IEEE WESCON}, Los Angeles, CA, USA, Aug. 1970, pp. 1--9.
 \bibitem{boehm} B. W. Boehm, ``A spiral model of software development and enhancement,'' \textbf{Computer}, vol. 21, no. 5, pp. 61--72, May 1988, doi: 10.1109/2.59.
-\bibitem{manifesto} K. Beck et al., ``Manifesto for Agile Software Development,'' 2001. [Online]. Available: \href{https://agilemanifesto.org/}{agilemanifesto.org}
-\bibitem{scrum} K. Schwaber and J. Sutherland, \textbf{The Scrum Guide: The Definitive Guide to Scrum: The Rules of the Game}, Nov. 2020. [Online]. Available: \href{https://scrumguides.org/scrum-guide.html}{scrumguides.org}
-\bibitem{iso} ISO/IEC/IEEE, \textbf{ISO/IEC/IEEE 29148:2018, Systems and software engineering---Life cycle processes---Requirements engineering}, 2nd ed. Geneva, Switzerland: ISO, 2018. [Online]. Available: \href{https://www.iso.org/standard/72089.html}{iso.org/standard/72089.html}
-\bibitem{lopdp} Asamblea Nacional del Ecuador, ``Ley Orgánica de Protección de Datos Personales,'' Quinto Suplemento del Registro Oficial No. 459, 26 May 2021. [Online]. Available: \href{https://www.registroficial.gob.ec/quinto-suplemento-al-registro-oficial-no-459/}{registroficial.gob.ec}
+\bibitem{manifesto} K. Beck et al., ``Manifesto for Agile Software Development,'' 2001. [Online]. Available: \href{https\://agilemanifesto.org/}{agilemanifesto.org}
+\bibitem{scrum} K. Schwaber and J. Sutherland, \textbf{The Scrum Guide: The Definitive Guide to Scrum: The Rules of the Game}, Nov. 2020. [Online]. Available: \href{https\://scrumguides.org/scrum-guide.html}{scrumguides.org}
+\bibitem{iso} ISO/IEC/IEEE, \textbf{ISO/IEC/IEEE 29148:2018, Systems and software engineering---Life cycle processes---Requirements engineering}, 2nd ed. Geneva, Switzerland: ISO, 2018. [Online]. Available: \href{https\://www.iso.org/standard/72089.html}{iso.org/standard/72089.html}
+\bibitem{lopdp} Asamblea Nacional del Ecuador, ``Ley Orgánica de Protección de Datos Personales,'' Quinto Suplemento del Registro Oficial No. 459, 26 May 2021. [Online]. Available: \href{https\://www.registroficial.gob.ec/quinto-suplemento-al-registro-oficial-no-459/}{registroficial.gob.ec}
+\bibitem{larman} C. Larman and V. R. Basili, ``Iterative and incremental development: A brief history,'' \textbf{Computer}, vol. 36, no. 6, pp. 47--56, Jun. 2003, doi: 10.1109/MC.2003.1204375.
 \end{thebibliography}
-
+\par
+\endgroup
+\par
 \end{document}
