@@ -35,7 +35,7 @@
 
 \begin{center}
 {\Large\bfseries\textcolor{verde}{Comparación de modelos de proceso de requisitos}}\\[3pt]
-{\large PC1 \separa GA-PRAC-01 \separa Avance de los escenarios 1 y 2}
+{\large PC1 \separa GA-PRAC-01 \separa Avance de los escenarios 1, 2 y 3}
 \end{center}
 \vspace{3pt}
 \textbf{Integrantes:} Alvarez Rubio Rai Eduardo; Briones Solorzano William Adrian; Rivera Rodriguez Joseph Jeremy\\
@@ -131,8 +131,91 @@ Se agregan puntos, promociones y tarjeta aunque no cambien el plazo ni el presup
 Un corte de datos duplica pedidos o deja una transferencia sin conciliar; también pueden exponerse datos personales.&Probar en Android de gama baja y con pérdida de conexión; confirmar el estado del pago, controlar reintentos para evitar duplicados y guardar solo los datos necesarios.\\
 \end{tabularx}
 
-\titulo{7. Continuación del trabajo grupal}
-Este documento deja resueltos los criterios y la comparación inicial de los escenarios 1 y 2. Para completar el producto de la guía, el grupo todavía debe agregar los escenarios 3 y 4 y elegir el escenario que desarrollará para actores y framework de IR. También registraremos en clase el aporte de cada integrante, según lo que efectivamente realice cada uno. La norma de ingeniería de requisitos servirá como referencia para organizar actividades y evidencia durante ese trabajo [6].
+\titulo{7. Escenario 3 \separa Sistema de trámites municipales contratado por contratación pública}
+El GAD Municipal del cantón San Isidro del Baba, en la provincia de Los Ríos, atiende cerca de 9\,000 trámites al año relacionados con permisos de funcionamiento, patentes y certificados de no adeudar. Actualmente, los ciudadanos deben acudir hasta tres veces a ventanilla y los técnicos revisan carpetas físicas. Por esta razón, el municipio contrató el desarrollo de un sistema web que permita realizar los trámites en línea.
+
+El contrato establece tres entregables con fechas y pagos asociados: la especificación de requisitos aprobada en el mes 2, el sistema instalado y probado en el mes 6, y la capacitación junto con el acta de entrega-recepción definitiva en el mes 7. Cada día de retraso genera una multa y los cambios de alcance que aumenten el costo necesitan un trámite formal que puede tardar varias semanas.
+
+El administrador del contrato, Fabián Zambrano, es el único canal oficial y se reúne con el equipo una vez por semana. La jefa de rentas y los técnicos de ventanilla, que serán los principales usuarios, participan únicamente cuando él los convoca. Además, la jefa de rentas ya modificó dos veces el flujo de aprobación de patentes y el concejo municipal está analizando una nueva ordenanza de tasas que podría aprobarse en el cuarto mes y cambiar los cálculos de cobro.
+
+El sistema manejará datos personales y pagos de tasas municipales, por lo que los errores podrían afectar dinero público y generar reclamos. La empresa contratista cuenta con seis personas y debe instalar el sistema en los servidores del municipio. También tendrá que consultar información catastral almacenada en una base de datos antigua que no cuenta con documentación.
+
+\subtitulo{Matriz comparativa del escenario 3}
+La valoración considera las condiciones del contrato, la disponibilidad de los usuarios, los posibles cambios en los trámites y la dificultad de integración con la base de datos catastral. Se utiliza la escala Alta, Media y Baja: \textbf{Alta} representa un buen ajuste del modelo, \textbf{Media} indica que puede funcionar con controles adicionales y \textbf{Baja} señala que sus características presentan dificultades frente al escenario.
+
+\scriptsize
+\begin{longtable}{@{}p{3.15cm}p{7.15cm}p{7.15cm}p{7.15cm}@{}}
+\rowcolor{verde}\color{white}\textbf{Criterio}&\color{white}\textbf{Secuencial (cascada)}&\color{white}\textbf{Iterativo e incremental}&\color{white}\textbf{Ágil}\\\endfirsthead
+\rowcolor{verde}\color{white}\textbf{Criterio}&\color{white}\textbf{Secuencial (cascada)}&\color{white}\textbf{Iterativo e incremental}&\color{white}\textbf{Ágil}\\\endhead
+K1. Estabilidad y cambios&\textbf{BAJA.} El flujo de aprobación de patentes ya cambió dos veces y la ordenanza del mes 4 podría modificar los cobros. Una definición cerrada desde el inicio puede generar retrabajo.&\textbf{ALTA.} Permite revisar los requisitos por ciclos y adaptar los módulos afectados cuando se conozca el contenido de la nueva ordenanza, sin rehacer todo el sistema.&\textbf{MEDIA.} Permite cambiar prioridades, pero los cambios que aumenten el costo deben pasar por un trámite contractual que puede tardar semanas.\\\hline
+K2. Partes interesadas y disponibilidad&\textbf{MEDIA.} El administrador del contrato participa semanalmente y puede aprobar entregables, aunque los usuarios finales dependen de sus convocatorias para participar.&\textbf{ALTA.} Se pueden programar reuniones de revisión al terminar cada incremento y coordinar la participación de la jefa de rentas y los técnicos sin exigir disponibilidad diaria.&\textbf{BAJA.} La participación frecuente de un representante del cliente es importante, pero el administrador solo se reúne una vez por semana y no siempre convoca a los usuarios.\\\hline
+K3. Tipo de sistema y criticidad&\textbf{ALTA.} El sistema maneja trámites oficiales, datos personales y cobros municipales, por lo que una especificación aprobada y controles formales son importantes.&\textbf{ALTA.} Los módulos de trámites, aprobación y cobro pueden construirse y validarse por partes, conservando controles sobre los datos y las operaciones.&\textbf{MEDIA.} Los ciclos cortos ayudarían a revisar las funciones, pero la criticidad del cobro y el manejo de datos personales exigen documentación, trazabilidad y validaciones adicionales.\\\hline
+K4. Riesgo principal&\textbf{BAJA.} La base catastral antigua no está documentada. Si sus problemas de compatibilidad se descubren durante la integración final, podrían afectar el plazo de instalación del mes 6.&\textbf{ALTA.} La integración con la base catastral puede probarse desde los primeros ciclos, lo que permite detectar problemas antes de completar el sistema.&\textbf{MEDIA.} Las entregas frecuentes permiten recibir observaciones, aunque no eliminan por sí solas la incertidumbre técnica de la base antigua ni las restricciones del contrato.\\\hline
+K5. Documentación y marco normativo o contractual&\textbf{ALTA.} Los pliegos exigen una especificación aprobada en el mes 2 y entregables formales. Este modelo facilita establecer una línea base y conservar aprobaciones.&\textbf{ALTA.} Puede mantener una especificación inicial aprobada y actualizarla por versiones, conservando trazabilidad de requisitos, pruebas y cambios en cada incremento.&\textbf{MEDIA.} Puede documentar los requisitos y las decisiones, pero debe reforzar el registro de aprobaciones y cambios para cumplir con los entregables y las condiciones de contratación pública.\\\hline
+K6. Equipo, plazo y recursos (complementario)&\textbf{MEDIA.} El equipo de seis personas y el plazo de siete meses permiten organizar fases, pero los cambios o problemas de integración pueden retrasar los entregables y generar multas.&\textbf{ALTA.} Los seis integrantes pueden distribuir el trabajo por módulos y organizar incrementos que se relacionen con las fechas de entrega de los meses 2, 6 y 7.&\textbf{MEDIA.} Los ciclos cortos pueden ayudar a entregar funciones, pero la disponibilidad limitada del cliente y los procedimientos formales de cambio dificultan mantener una dinámica ágil continua.\\
+\end{longtable}
+\normalsize
+\textbf{Recomendación inicial:} Iterativo e incremental con hitos contractuales, una especificación de requisitos aprobada y un procedimiento formal para gestionar los cambios de alcance.
+
+\titulo{8. Recomendación y riesgos del escenario 3}
+Para este escenario recomendamos un modelo \textbf{iterativo e incremental con controles formales en los entregables del contrato}. No consideramos conveniente trabajar con una cascada completamente rígida, porque existen requisitos que todavía pueden cambiar. Tampoco elegiríamos un enfoque ágil puro, debido a la disponibilidad limitada de los usuarios y a las condiciones de contratación pública.
+
+Las razones principales son las siguientes:
+\begin{enumerate}[leftmargin=*,itemsep=1pt]
+\item \textbf{Cambios en los requisitos (K1):} la jefa de rentas ya modificó dos veces el flujo de aprobación de patentes y existe una posible ordenanza que cambiaría los cálculos de cobro en el cuarto mes. Trabajar por incrementos permitiría revisar esas funciones cuando se confirmen las nuevas reglas, evitando modificar todo el sistema.
+\item \textbf{Riesgo de integración (K4):} el sistema debe consultar una base de datos catastral antigua que nadie ha documentado. Si se deja esta integración para el final, podrían aparecer incompatibilidades cuando quede poco tiempo para entregar. Por eso, conviene realizar pruebas de conexión y revisar la información desde los primeros incrementos.
+\item \textbf{Condiciones del contrato (K5 y K6):} el municipio exige una especificación aprobada en el mes 2, el sistema instalado y probado en el mes 6 y la capacitación con el acta definitiva en el mes 7. El modelo iterativo permite desarrollar por partes, pero conservando revisiones, documentación y aprobaciones para cumplir con esos compromisos.
+\end{enumerate}
+La \textbf{cascada} se podría utilizar para organizar los documentos y las aprobaciones del contrato, pero como modelo principal sería poco flexible ante los cambios del flujo de patentes y la posible ordenanza. Por otro lado, el modelo \textbf{ágil} permitiría revisar prioridades con frecuencia, pero depende de una participación constante del cliente que no está garantizada en este escenario. Además, los cambios que aumenten el costo requieren un procedimiento formal.
+
+La tensión principal está entre la necesidad de adaptarse a los cambios municipales y la obligación de cumplir fechas y entregables contractuales. Por eso, proponemos trabajar mediante incrementos planificados, sin perder la aprobación formal de los requisitos ni la trazabilidad de las modificaciones.
+
+\subtitulo{Riesgos del modelo elegido}
+\begin{tabularx}{\linewidth}{@{}p{6cm}Y@{}}
+\rowcolor{verde}\color{white}\textbf{Riesgo}&\color{white}\textbf{Mitigación que proponemos}\\\midrule
+La nueva ordenanza de tasas se aprueba en el cuarto mes y modifica los cálculos de cobro.&Mantener separados los parámetros de cálculo de tasas de otras funciones del sistema. Registrar el cambio, analizar su impacto y solicitar la aprobación formal antes de incorporarlo al alcance contratado.\\
+La base catastral antigua presenta incompatibilidades o datos incompletos durante la integración.&Revisar su estructura desde el primer incremento, realizar pruebas de conexión con datos de ejemplo y documentar los campos necesarios antes de completar el módulo de trámites.\\
+Los técnicos de ventanilla y la jefa de rentas no participan a tiempo en las revisiones.&Programar las reuniones con anticipación a través del administrador del contrato y dejar registradas las observaciones, validaciones y aprobaciones de cada revisión.\\
+Un cambio solicitado aumenta el alcance y retrasa los entregables.&Registrar cada solicitud, evaluar su impacto en costo y tiempo y tramitar su aprobación formal antes de comprometer su desarrollo.\\
+\end{tabularx}
+
+\titulo{9. Actores y framework de Ingeniería de Requisitos del escenario 3}
+Para este escenario se utiliza el modelo iterativo e incremental recomendado anteriormente. La identificación de actores permite reconocer quién proporciona información, quién aprueba los requisitos, quién utilizará el sistema y quién se encarga de construirlo. El framework de Ingeniería de Requisitos se organiza mediante actividades centrales, actividades transversales y artefactos, considerando también el contexto del sistema [6].
+
+\subtitulo{9.1. Actores del escenario}
+\small
+\begin{tabularx}{\linewidth}{@{}p{4.6cm}Y Y@{}}
+\rowcolor{verde}\color{white}\textbf{Actor del escenario}&\color{white}\textbf{Rol en el proceso de requisitos}&\color{white}\textbf{Cuándo y cómo participa}\\\midrule
+\textbf{GAD Municipal de San Isidro del Baba}&Cliente y entidad contratante. Define la necesidad del sistema y establece las condiciones de aceptación mediante el contrato.&Participa al inicio del proyecto mediante los pliegos y durante las aprobaciones de los entregables establecidos.\\
+\textbf{Fabián Zambrano, administrador del contrato}&Interlocutor oficial entre el municipio y la empresa contratista. Coordina reuniones y canaliza las solicitudes y aprobaciones.&Participa semanalmente. Convoca a los usuarios cuando se necesita conocer o validar requisitos y comunica las decisiones oficiales.\\
+\textbf{Jefa de rentas}&Usuaria principal y fuente de requisitos relacionados con patentes, aprobación de trámites y cálculo de tasas.&Participa cuando es convocada para explicar los procesos, revisar los incrementos y validar que las funciones correspondan a las necesidades de rentas.\\
+\textbf{Técnicos de ventanilla}&Usuarios finales que conocen el proceso actual de atención y revisión de documentos.&Participan en las reuniones convocadas para explicar las actividades actuales y probar los flujos de trámites durante las revisiones.\\
+\textbf{Analista de requisitos de la empresa contratista}&Responsable de obtener, analizar, documentar y negociar los requisitos con los representantes del municipio.&Participa durante todo el proyecto, desde el levantamiento inicial hasta la gestión de cambios y validación de los requisitos.\\
+\textbf{Equipo de desarrollo y pruebas de la empresa contratista}&Construye los incrementos del sistema y comprueba que cumplan los requisitos acordados.&Participa en cada ciclo para implementar las funciones, realizar pruebas y corregir los problemas encontrados.\\
+\textbf{Responsable técnico municipal (por identificar)}&Debe coordinar los aspectos técnicos relacionados con los servidores municipales y el acceso a la base de datos catastral.&Su participación debe coordinarse antes de las pruebas de integración y de la instalación. El escenario no identifica a una persona concreta para este rol.\\
+\end{tabularx}
+\normalsize
+
+\subtitulo{9.2. Aplicación del framework de IR}
+El proceso se organiza en etapas e incrementos relacionados con los entregables contractuales. En cada uno se realizan actividades centrales de elicitación, documentación y negociación; también se mantienen actividades transversales de validación y gestión.
+
+\scriptsize
+\begin{longtable}{@{}p{3.15cm}p{7.15cm}p{7.15cm}p{7.15cm}@{}}
+\rowcolor{verde}\color{white}\textbf{Fase o iteración}&\color{white}\textbf{Actividades centrales (elicitación, documentación y negociación)}&\color{white}\textbf{Actividades transversales (validación y gestión)}&\color{white}\textbf{Artefactos producidos}\\\endfirsthead
+\rowcolor{verde}\color{white}\textbf{Fase o iteración}&\color{white}\textbf{Actividades centrales (elicitación, documentación y negociación)}&\color{white}\textbf{Actividades transversales (validación y gestión)}&\color{white}\textbf{Artefactos producidos}\\\endhead
+\textbf{Fase inicial: levantamiento y especificación (meses 1--2)}&Recopilar información sobre permisos, patentes y certificados. Entrevistar al administrador del contrato y, mediante su convocatoria, a la jefa de rentas y técnicos. Documentar los requisitos y acordar el alcance inicial.&Revisar los requisitos con los representantes municipales, resolver diferencias y establecer una línea base aprobada. Registrar la trazabilidad entre necesidades y requisitos.&Objetivos del sistema, descripción del alcance, escenarios de uso y especificación de requisitos aprobada para el entregable del mes 2.\\\hline
+\textbf{Iteración 1: trámites y flujo de aprobación (meses 2--3)}&Analizar y construir el flujo de registro de trámites, permisos y aprobación de patentes. Revisar las observaciones de los usuarios y documentar los ajustes necesarios.&Validar el funcionamiento del flujo con la jefa de rentas y los técnicos. Registrar cambios y verificar que no contradigan los requisitos aprobados.&Prototipo del flujo de trámites, requisitos funcionales por módulo, casos de uso y criterios de aceptación.\\\hline
+\textbf{Iteración 2: cobros e integración catastral (meses 3--5)}&Obtener información sobre los cálculos de tasas y la estructura de la base catastral. Analizar la posible ordenanza y negociar el tratamiento de los cambios que afecten el alcance.&Realizar pruebas tempranas de integración, revisar los datos utilizados y gestionar formalmente las solicitudes que modifiquen costo o plazo.&Especificación de requisitos actualizada, reglas de cálculo, mapeo de datos catastrales, registro de cambios y resultados de pruebas de integración.\\\hline
+\textbf{Iteración 3: integración y validación del sistema (meses 5--6)}&Completar los módulos y documentar los requisitos pendientes. Revisar con los usuarios los procesos completos antes de la instalación.&Ejecutar pruebas funcionales y de integración, comprobar los requisitos y registrar defectos y correcciones. Preparar la aprobación del entregable del mes 6.&Versión integrada del sistema, matriz de trazabilidad, casos y resultados de pruebas, registro de defectos y acta de instalación y pruebas.\\\hline
+\textbf{Fase de cierre y entrega (mes 7)}&Recopilar observaciones finales, documentar las actividades de capacitación y explicar el uso del sistema a los usuarios municipales.&Verificar el cumplimiento de los requisitos acordados, gestionar las observaciones finales y obtener la aceptación formal del municipio.&Material de capacitación, manual de usuario, registro de observaciones y acta de entrega-recepción definitiva.\\
+\end{longtable}
+\normalsize
+En este escenario, las actividades centrales permiten conocer cómo se realizan los trámites y convertir esas necesidades en requisitos que puedan implementarse. Las actividades transversales ayudan a comprobar que lo solicitado sea correcto y a controlar los cambios que puedan aparecer durante el proyecto.
+
+Los artefactos no se producen únicamente al inicio: se actualizan conforme avanzan las iteraciones. Esto permite conservar la especificación aprobada, registrar las modificaciones y relacionar cada requisito con sus pruebas y entregables. De esta manera, el equipo puede adaptarse a las necesidades confirmadas del municipio sin perder el control del contrato.
+
+\titulo{10. Continuación del trabajo grupal}
+Este documento deja resueltos los criterios y la comparación de los escenarios 1, 2 y 3, e incluye los actores y el framework de IR del escenario 3. Para completar el producto de la guía, el grupo todavía debe agregar el escenario 4 y confirmar el escenario que desarrollará para actores y framework de IR. También registraremos en clase el aporte de cada integrante, según lo que efectivamente realice cada uno. La norma de ingeniería de requisitos servirá como referencia para organizar actividades y evidencia durante ese trabajo [6].
 
 \begin{thebibliography}{9}
 \bibitem{guia} G. C. Guerrero-Ulloa, \textbf{GA-PRAC-01: Comparación entre modelos de proceso de requisitos en escenarios reales}, material complementario y guía-rúbrica, ISR-401, UTEQ, SPA 2026--2027, pp. 5--6.
