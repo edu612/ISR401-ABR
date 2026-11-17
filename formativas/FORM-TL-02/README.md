@@ -1,13 +1,14 @@
-# GA-TL-02 - FORM
+# GA-TL-02 – FORM
 
 **Taller:** Entrevista estructurada y Design Thinking aplicados al PFC  
-**Asignatura:** ISR-401 – Ingeniería de Requisitos
+**Asignatura:** Ingeniería de Requisitos (ISR-401)  
+**Proyecto:** UteqFit-AI – Sistema de gestión del Gimnasio Universitario (UBU)
 
-## Contenido
+## Archivos
 
 - `main.tex`: guía de entrevista semiestructurada.
-- `referencias.bib`: referencias bibliográficas.
-- `main.pdf`: documento en formato PDF.
+- `main.pdf`: versión en PDF de la guía.
+- `referencias.bib`: archivo de referencias bibliográficas.
 - `compilar.py`: script para compilar el documento con Tectonic.
 
 ## Compilación
