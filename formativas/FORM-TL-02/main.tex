@@ -3,143 +3,104 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=2.0cm]{geometry}
-\usepackage{array,tabularx,booktabs}
+\usepackage{array,tabularx}
 \usepackage[table]{xcolor}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage{microtype}
-\hypersetup{colorlinks=true,linkcolor=teal!60!black,urlcolor=blue!60!black,citecolor=teal!60!black}
-\definecolor{verde}{HTML}{174A6E}
 \definecolor{azul}{HTML}{174A6E}
 \definecolor{palido}{HTML}{EAF2F7}
-\newcommand{\separa}{\hspace{0.25em}\raisebox{0.25ex}{\rule{0.38ex}{0.38ex}}\hspace{0.25em}}
-\renewcommand{\arraystretch}{1.16}
+\hypersetup{colorlinks=true,linkcolor=azul,urlcolor=azul}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{5pt}
+\setlength{\parskip}{4pt}
+\renewcommand{\arraystretch}{1.15}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{UTEQ \separa Ingeniería de Requisitos (ISR-401)}
-\fancyhead[R]{GA-TL-02 \separa FORM}
-\fancyfoot[L]{ISR-401 \separa Ingeniería de Requisitos}
+\fancyhead[L]{UTEQ \textbullet\ Ingeniería de Software}
+\fancyhead[R]{ISR-401 \textbullet\ GA-TL-02}
+\fancyfoot[L]{UteqFit-AI \textbullet\ Gimnasio Universitario (UBU)}
 \fancyfoot[R]{Página \thepage}
 \renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0pt}
-\newcommand{\titulo}[1]{\section*{\textcolor{verde}{#1}}}
-\newcommand{\subtitulo}[1]{\subsection*{\textcolor{azul}{#1}}}
+\newcommand{\titulo}[1]{\section*{\textcolor{azul}{#1}}}
+\newcommand{\bloque}[1]{\subsection*{\textcolor{azul}{#1}}}
 \begin{document}
 \begin{center}
-{\Large\bfseries\textcolor{verde}{Guía de entrevista semiestructurada}}\\[3pt]
-{\large GA-TL-02 \separa FORM \separa Taller de elicitación y Design Thinking}
+{\Large\bfseries\textcolor{azul}{Guía de entrevista semiestructurada}}\\[3pt]
+{\large GA-TL-02 \textbullet\ Taller de entrevista y Design Thinking}\\
+{\normalsize Proyecto: UteqFit-AI -- Sistema de gestión del Gimnasio Universitario (UBU)}
 \end{center}
 \textbf{Integrantes:} Alvarez Rubio Rai Eduardo; Briones Solorzano William Adrian; Rivera Rodriguez Joseph Jeremy\\
 \textbf{Responsable de esta parte:} Alvarez Rubio Rai Eduardo\\
-\textbf{Asignatura:} ISR-401 \separa Ingeniería de Requisitos \separa UTEQ\\
-\textbf{Proyecto:} Sistema de gestión para un gimnasio\\
-\textbf{Persona entrevistada:} Propietario o administrador del gimnasio.
+\textbf{Asignatura:} Ingeniería de Requisitos (ISR-401) \textbullet\ 4.º nivel \textbullet\ Paralelo A
 
-\titulo{1. Objetivo de la entrevista}
-Conocer cómo se organiza el gimnasio, qué actividades realizan sus responsables y usuarios, qué herramientas utilizan y qué situaciones les resultan difíciles en el trabajo diario. También se busca identificar expectativas y condiciones que deberían considerarse antes de proponer un sistema de gestión. La intención es comprender primero el contexto, no llegar con una solución decidida de antemano.
+\titulo{1. Objetivo}
+Con esta entrevista quiero conocer cómo se realizan actualmente la inscripción de usuarios, el control de acceso y asistencia, la planificación de rutinas y el seguimiento de usuarios, así como la gestión y el mantenimiento de los equipos del Gimnasio Universitario (UBU). Busco comprender el trabajo diario y las necesidades de las personas que participan en estos procesos, sin adelantar soluciones.
 
-\titulo{2. Preparación de la entrevista}
+\titulo{2. Datos de la entrevista}
 \begin{tabularx}{\linewidth}{@{}p{4.2cm}X@{}}
-\rowcolor{palido}\textbf{Duración prevista} & 20 a 30 minutos para el levantamiento real. El roleplay de clase se ajustará a 10 minutos.\\
-\textbf{Modalidad} & Presencial o virtual, según la disponibilidad de la persona entrevistada.\\
-\textbf{Entrevistado sugerido} & Propietario o administrador del gimnasio.\\
-\textbf{Materiales} & Esta guía, protocolo de consentimiento, notas y, solo con autorización expresa, dispositivo de grabación.\\
-\textbf{Entrevistador} & Alvarez Rubio Rai Eduardo.\\
-\textbf{Registro} & Un integrante tomará notas de ideas, ejemplos, dudas y términos utilizados por la persona entrevistada.\\
+\rowcolor{palido}\textbf{Lugar} & Gimnasio Universitario (UBU), UTEQ, Quevedo, Los Ríos.\\
+\textbf{Persona entrevistada y rol} & \rule{\linewidth}{0.4pt}\\
+\textbf{Fecha} & \rule{\linewidth}{0.4pt}\\
+\textbf{Entrevistador} & Alvarez Rubio Rai Eduardo\\
+\textbf{Duración estimada} & 15 a 30 minutos.\\
 \end{tabularx}
 
-\titulo{3. Apertura y encuadre}
-\textit{Presentación sugerida:}
+\titulo{3. Presentación}
+Buenos días. Soy estudiante de Ingeniería de Software y formo parte del equipo que está trabajando en UteqFit-AI, una propuesta académica para apoyar la gestión del Gimnasio Universitario. Me gustaría conocer cómo realizan sus actividades y qué aspectos consideran que podrían mejorar. La información se utilizará para nuestro trabajo de la asignatura ISR-401. Antes de comenzar, revisaré con usted el consentimiento informado. No le pediré historias clínicas, diagnósticos ni datos personales de salud de los usuarios.
 
-Muchas gracias por recibirnos. Somos estudiantes de Ingeniería de Software y estamos explorando la posibilidad de desarrollar un sistema relacionado con la gestión de un gimnasio. Antes de pensar en pantallas o funcionalidades, nos gustaría conocer cómo trabajan actualmente, qué les funciona bien y qué cosas les gustaría mejorar. No hay respuestas correctas o incorrectas; nos interesa conocer su experiencia tal como es. La información se utilizará únicamente para el trabajo académico y seguiremos lo indicado en el consentimiento informado.
+\titulo{4. Preguntas por bloques}
 
-\titulo{4. Preguntas organizadas por bloques}
-
-\subtitulo{Bloque A. Conocer el gimnasio y su funcionamiento}
-\begin{enumerate}[leftmargin=*,itemsep=5pt]
-\item Para comenzar, ¿podría contarnos un poco sobre el gimnasio y las actividades o servicios que ofrecen?
-\item ¿Cómo se distribuyen las responsabilidades entre las personas que trabajan aquí?
-\item ¿Cómo transcurre un día normal en el gimnasio, desde que abre hasta que termina la jornada?
-\item ¿Qué tareas administrativas o de atención realizan con mayor frecuencia?
+\bloque{A. Inscripción y registro de usuarios}
+\begin{enumerate}[leftmargin=*,itemsep=3pt]
+\item ¿Cómo realizan actualmente la inscripción de una persona que desea utilizar el gimnasio?
+\item ¿Qué datos registran y cómo mantienen actualizada la información de los usuarios?
+\item ¿Qué sucede cuando una persona necesita corregir sus datos o actualizar su registro?
 \end{enumerate}
 
-\subtitulo{Bloque B. Inscripción y relación con los socios}
-\begin{enumerate}[leftmargin=*,itemsep=5pt,resume]
-\item Cuando una persona quiere inscribirse por primera vez, ¿qué pasos siguen para atenderla y registrarla?
-\item ¿Qué información suelen solicitar a los nuevos socios y para qué la utilizan?
-\item ¿Cómo registran los planes, las membresías, sus fechas de inicio y vencimiento?
-\item Cuando un socio desea cambiar de plan, pausar su membresía o retirarse, ¿cómo gestionan esa solicitud?
+\bloque{B. Acceso y asistencia}
+\begin{enumerate}[leftmargin=*,itemsep=3pt]
+\item ¿Cómo verifican que una persona puede ingresar al gimnasio?
+\item ¿De qué manera registran la asistencia y consultan esos registros cuando los necesitan?
+\item ¿Qué hacen cuando se presenta un inconveniente al momento de ingresar o registrar la asistencia?
 \end{enumerate}
 
-\subtitulo{Bloque C. Pagos y control administrativo}
-\begin{enumerate}[leftmargin=*,itemsep=5pt,resume]
-\item ¿Cómo llevan actualmente el control de los pagos y de las mensualidades pendientes?
-\item ¿Qué hacen para saber qué membresías están vigentes y cuáles están próximas a vencer?
-\item ¿Cómo registran los comprobantes o verifican que un pago se haya realizado correctamente?
-\item ¿Preparan reportes sobre ingresos, socios activos u otros datos? ¿Cómo los elaboran?
+\bloque{C. Planificación de rutinas y seguimiento}
+\begin{enumerate}[leftmargin=*,itemsep=3pt]
+\item ¿Cómo organizan y asignan actualmente las rutinas o actividades a los usuarios?
+\item ¿Quién se encarga de planificar o actualizar esa información?
+\item ¿Cómo realizan el seguimiento de las actividades sin registrar información médica o datos personales de salud?
 \end{enumerate}
 
-\subtitulo{Bloque D. Asistencia, servicios y comunicación}
-\begin{enumerate}[leftmargin=*,itemsep=5pt,resume]
-\item ¿Cómo controlan la asistencia de los socios cuando ingresan al gimnasio?
-\item ¿Manejan horarios de clases, turnos, entrenadores o reservas? ¿Cómo se organizan?
-\item ¿Por qué medios se comunican con los socios para informar cambios, promociones o novedades?
-\item ¿Qué consultas o solicitudes reciben con más frecuencia por parte de los socios?
+\bloque{D. Gestión y mantenimiento de equipos}
+\begin{enumerate}[leftmargin=*,itemsep=3pt]
+\item ¿Cómo llevan el control de los equipos y máquinas disponibles en el gimnasio?
+\item ¿Cómo informan o registran cuando un equipo necesita reparación o mantenimiento?
+\item ¿Cómo consultan el estado de los equipos y la fecha de su último mantenimiento?
 \end{enumerate}
 
-\subtitulo{Bloque E. Dificultades y expectativas}
-\begin{enumerate}[leftmargin=*,itemsep=5pt,resume]
-\item De todas las tareas que hemos conversado, ¿cuál suele tomar más tiempo o causar más inconvenientes? ¿Podría compartir un ejemplo?
-\item ¿En qué momentos se producen confusiones, errores o reclamos, si es que ocurren?
-\item ¿Qué información les cuesta encontrar cuando necesitan tomar una decisión o atender a un socio?
-\item Si pudieran mejorar una sola parte de la gestión del gimnasio, ¿cuál elegirían y por qué?
-\item Pensando en una herramienta informática, ¿qué tarea les gustaría que facilitara primero y qué resultado esperarían obtener?
-\item ¿Hay alguna condición que debamos tener en cuenta para que una herramienta así sea práctica para ustedes, por ejemplo, el equipo disponible, la conexión a internet o el tiempo para aprender a usarla?
+\bloque{E. Necesidades y expectativas}
+\begin{enumerate}[leftmargin=*,itemsep=3pt]
+\item De las actividades que conversamos, ¿cuál considera que necesita mayor atención y por qué?
+\item Si contáramos con un sistema para apoyar estas tareas, ¿qué le gustaría realizar de forma más sencilla?
+\item ¿Qué deberíamos tener en cuenta para que el sistema sea fácil y útil en el trabajo diario?
 \end{enumerate}
 
-\titulo{5. Preguntas de profundización}
-No es necesario formular todas estas preguntas. El entrevistador puede utilizarlas cuando una respuesta sea muy general o cuando sea útil conocer un caso concreto.
+\titulo{5. Preguntas para profundizar}
+Si necesito comprender mejor una respuesta, puedo preguntar: ¿Podría darme un ejemplo?; ¿cómo lo resuelven actualmente?; ¿quién participa en ese proceso?; ¿qué ocurre después?; ¿qué información necesita consultar? Estas preguntas me ayudarán a escuchar detalles sin sugerir una solución.
 
-\begin{itemize}[leftmargin=*,itemsep=3pt]
-\item ¿Podría explicarme un poco más cómo sucede eso?
-\item ¿Recuerda la última vez que ocurrió? ¿Qué hicieron para resolverlo?
-\item ¿Quién suele encargarse de esa tarea?
-\item ¿Qué información necesita tener a mano para completar ese proceso?
-\item ¿Qué pasa después de ese paso?
-\item ¿Qué sería diferente para usted si ese proceso funcionara mejor?
-\end{itemize}
+\titulo{6. Cierre}
+Muchas gracias por su tiempo y por compartir su experiencia. Lo que me ha contado nos ayudará a comprender mejor el funcionamiento del gimnasio y a definir los requisitos del proyecto. Antes de terminar, quisiera saber si hay algún aspecto importante que no le haya preguntado y que usted considere necesario mencionar.
 
-\titulo{6. Cierre de la conversación}
-\textit{Cierre sugerido:}
-
-Muchas gracias por compartir cómo funciona el gimnasio y por contarnos su experiencia. Lo que nos ha explicado nos ayudará a entender mejor las necesidades antes de definir qué debería hacer el sistema. Antes de terminar, ¿hay algo importante que no le hayamos preguntado y que considere necesario que conozcamos? Si al revisar nuestras notas nos surge alguna duda, ¿sería posible consultarle nuevamente por el medio que usted prefiera?
-
-\titulo{7. Recomendaciones para quien entrevista}
-\begin{itemize}[leftmargin=*,itemsep=3pt]
-\item Escuchar sin interrumpir y permitir que la persona explique con sus propias palabras.
-\item Evitar sugerir respuestas o presentar como hechos problemas que todavía no se han confirmado.
-\item Pedir ejemplos concretos cuando se mencionen dificultades, excepciones o tareas repetitivas.
-\item Mantener el orden de los bloques como orientación; se puede cambiar el orden si la conversación lo requiere.
-\item Diferenciar lo que la persona dijo de las interpretaciones o ideas del equipo.
-\item Anotar términos desconocidos para aclararlos, en lugar de asumir su significado.
-\end{itemize}
-
-\titulo{8. Registro de la entrevista}
-
-\begin{tabularx}{\linewidth}{@{}p{4.0cm}X@{}}
-\textbf{Fecha y modalidad} & \rule{0pt}{0.8cm}\\
-\textbf{Persona y cargo} & \rule{0pt}{0.8cm}\\
-\textbf{Procesos descritos} & \rule{0pt}{1.2cm}\\
-\textbf{Dificultades mencionadas} & \rule{0pt}{1.2cm}\\
-\textbf{Necesidades o expectativas} & \rule{0pt}{1.2cm}\\
-\textbf{Dudas por confirmar} & \rule{0pt}{1.2cm}\\
+\titulo{7. Registro de notas}
+\begin{tabularx}{\linewidth}{@{}p{4.1cm}X@{}}
+\textbf{Proceso descrito} & \rule{0pt}{0.8cm}\\
+\textbf{Necesidad o dificultad mencionada} & \rule{0pt}{0.9cm}\\
+\textbf{Ejemplo compartido} & \rule{0pt}{0.9cm}\\
+\textbf{Idea o mejora sugerida} & \rule{0pt}{0.9cm}\\
+\textbf{Punto que debemos aclarar} & \rule{0pt}{0.9cm}\\
 \end{tabularx}
 
 \vfill
-\begin{center}
-\small\textcolor{verde}{Documento de trabajo académico \separa GA-TL-02 \separa FORM}
-\end{center}
+{\small\textit{Nota:} Durante la entrevista no solicitaré historias clínicas, diagnósticos, lesiones, medidas corporales, rutinas individuales ni otros datos de salud identificables. La conversación se centrará en los procesos de gestión del proyecto.}
 \end{document}
