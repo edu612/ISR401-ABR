@@ -1,27 +1,19 @@
 # GA-TL-02 - FORM
 
-Taller: Entrevista estructurada y Design Thinking aplicados al PFC.
+**Taller:** Entrevista estructurada y Design Thinking aplicados al PFC  
+**Asignatura:** ISR-401 – Ingeniería de Requisitos
 
-## Proyecto de referencia provisional
-Sistema de gestión para un gimnasio. El gimnasio cliente, sus responsables y el alcance funcional están pendientes de confirmar. Por ello, las preguntas se redactaron de forma exploratoria y no presuponen procesos o problemas específicos.
+## Contenido
 
-## Archivos
-- `main.tex`: documento LaTeX de trabajo.
-- `referencias.bib`: bibliografía pendiente de consolidar por el equipo.
-- `compilar.py`: script para generar `main.pdf` con Tectonic.
-- `main.pdf`: se genera al compilar localmente.
+- `main.tex`: guía de entrevista semiestructurada.
+- `referencias.bib`: referencias bibliográficas.
+- `main.pdf`: documento en formato PDF.
+- `compilar.py`: script para compilar el documento con Tectonic.
 
-## Compilar
-Instalar Tectonic y ejecutar:
+## Compilación
+
+Con Tectonic instalado, ejecutar:
 
 ```bash
 python compilar.py
 ```
-
-## Estado de los entregables
-- [x] Parte 1: guía de entrevista semiestructurada (borrador de trabajo).
-- [ ] Parte 2: protocolo de consentimiento informado.
-- [ ] Parte 3: mapa de empatía, una vez definido el usuario principal.
-- [ ] Roleplay de 10 minutos y registro de observaciones.
-
-**Importante:** completar los datos del cliente y contrastar las preguntas durante el contacto real. No inventar hallazgos ni respuestas.
