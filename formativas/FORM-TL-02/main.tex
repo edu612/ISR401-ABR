@@ -6,9 +6,10 @@
 \usepackage{array,tabularx}
 \usepackage[table]{xcolor}
 \usepackage{enumitem}
+\usepackage{amssymb}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
-\usepackage{microtype}
+\usepackage[expansion=false]{microtype}
 \definecolor{azul}{HTML}{174A6E}
 \definecolor{palido}{HTML}{EAF2F7}
 \hypersetup{colorlinks=true,linkcolor=azul,urlcolor=azul}
@@ -103,6 +104,56 @@ Muchas gracias por su tiempo y por compartir su experiencia. Lo que me ha contad
 
 \vfill
 {\small\textit{Nota:} Durante la entrevista no solicitaré historias clínicas, diagnósticos, lesiones, medidas corporales, rutinas individuales ni otros datos de salud identificables. La conversación se centrará en los procesos de gestión del proyecto.}
+
+% ==================================================
+% SECCIONES ADICIONALES (Design Thinking)
+% ==================================================
+
+\clearpage
+
+\titulo{8. Mapa de Empatía}
+\arrayrulecolor{azul}
+\renewcommand{\arraystretch}{1.25}
+\noindent\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+\hline
+\cellcolor{azul}\textcolor{white}{\textbf{Qué piensa y siente}} & \cellcolor{azul}\textcolor{white}{\textbf{Qué ve}}\\
+\hline
+\cellcolor{palido}Siente que el tiempo no le rinde debido a la alta carga operativa manual. Piensa que la tecnología actual del gimnasio está desactualizada y que se requiere una herramienta ágil para no estresar al personal de atención.
+&
+\cellcolor{palido}Ve filas largas de estudiantes esperando en la entrada durante las horas pico, cuadernos llenos de tachones, hojas sueltas y equipos que a veces pasan días con reportes de daños pendientes de revisión.\\
+\hline
+\cellcolor{azul}\textcolor{white}{\textbf{Qué oye}} & \cellcolor{azul}\textcolor{white}{\textbf{Qué dice y hace}}\\
+\hline
+\cellcolor{palido}Escucha las quejas constantes de los usuarios por las demoras al ingresar, los reclamos sobre máquinas averiadas y los comentarios de sus compañeros sobre lo pesado que es llevar el control en papel.
+&
+\cellcolor{palido}Dice frases como ``todo lo anotamos a mano y se nos arman filas'' o ``necesitamos algo más rápido para atenderlos''. En su día a día, corre de un lado a otro atendiendo el mesón, buscando libretas y respondiendo preguntas al mismo tiempo.\\
+\hline
+\cellcolor{azul}\textcolor{white}{\textbf{Esfuerzos / Dolores (Pains)}} & \cellcolor{azul}\textcolor{white}{\textbf{Resultados / Necesidades (Gains)}}\\
+\hline
+\cellcolor{palido}Cuellos de botella en la entrada, pérdida de tiempo buscando registros en papel, dificultad para rastrear mantenimientos preventivos y falta de actualización automática de los datos de los usuarios.
+&
+\cellcolor{palido}Contar con un sistema digital centralizado que agilice el control de acceso, automatice el registro de asistencia y permita consultar de manera limpia y rápida el estado de las máquinas y de los usuarios.\\
+\hline
+\end{tabularx}
+\renewcommand{\arraystretch}{1.15}
+\arrayrulecolor{black}
+
+\titulo{9. Definición del Problema}
+\noindent\fcolorbox{azul}{palido}{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\vspace{3pt}\textit{¿Cómo podríamos optimizar el control de acceso, el registro de asistencia y la gestión de mantenimiento de los equipos en el Gimnasio Universitario (UBU) para agilizar el flujo de ingreso y reducir la carga operativa del personal, evitando la dependencia de procesos manuales propensos a cuellos de botella?}\vspace{3pt}}}
+
+\titulo{10. Ajustes de Preguntas Defectuosas}
+\renewcommand{\arraystretch}{1.25}
+\noindent\begin{tabularx}{\linewidth}{@{}>{\centering\arraybackslash}p{0.6cm}p{3.2cm}XX@{}}
+\rowcolor{azul}\textcolor{white}{\textbf{N.º}} & \textcolor{white}{\textbf{Tipo de error detectado}} & \textcolor{white}{\textbf{Pregunta original}} & \textcolor{white}{\textbf{Versión corregida}}\\
+\rowcolor{palido}1 & Pregunta inductiva & ``¿Verdad que el sistema actual en papel es muy lento y causa filas?'' & ``¿Cómo describe el proceso de registro y control de acceso en las horas de mayor afluencia en el gimnasio?''\\
+2 & Pregunta doble & ``¿Cómo registran la asistencia de los estudiantes y qué tan seguido se dañan las máquinas?'' & ``¿De qué manera verifican y registran la asistencia diaria de las personas que ingresan?''\\
+\rowcolor{palido}3 & Pregunta cerrada sin necesidad & ``¿Ustedes usan libretas para anotar el mantenimiento de los equipos?'' & ``¿Cómo llevan el control de las fechas y el estado de las revisiones de mantenimiento de las máquinas?''\\
+\end{tabularx}
+\renewcommand{\arraystretch}{1.15}
+
+\titulo{11. Declaración de Uso de Apoyo Tecnológico (IA)}
+Se utilizó Gemini para mejorar la redacción, consultar o corregir faltas ortográficas, gramaticales, conectores repetitivos, etcétera. Asimismo, se utilizó Claude para verificar la estructura del archivo y el contenido del documento.
+
 
 % ==================================================
 % PROTOCOLO DE CONSENTIMIENTO INFORMADO
